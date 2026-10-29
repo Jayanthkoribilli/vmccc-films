@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vmccc.films_ | Wedding Content Creators & Cinematic Films</title>
+  
+  <meta name="description" content="Wedding content creators capturing the unique stories of couples on their special day. Stunning visuals, heartfelt narratives, and fun BTS delivered on-site in 10 minutes. Slot booking: 8341667106." />
+  <meta name="keywords" content="vmccc films, vmccc.films_, wedding content creator, wedding reels, couple stories, instagram reels, cinematic wedding, 8341667106" />
+  <meta name="author" content="vmccc.films_" />
+  <meta name="theme-color" content="#700104" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="vmccc.films_ | Wedding Content Creators" />
+  <meta property="og:description" content="Turning your celebration into a cherished keepsake through stunning visuals, heartfelt narratives and fun BTS." />
+  <meta property="og:image" content="assets/about_card.jpg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display (Luxury), Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              burgundy: '#700104',
+              burgundyLight: '#94101E',
+              crimson: '#A31526',
+              gold: '#E2BA65',
+              goldLight: '#F3E5C8',
+              goldDark: '#B88E35',
+              noir: '#0B0708',
+              card: '#160B0E',
+              border: 'rgba(226, 186, 101, 0.15)'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            heading: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- React 18, ReactDOM 18 & Babel Standalone -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="bg-[#0B0708] text-white antialiased selection:bg-[#700104] selection:text-[#F3E5C8]">
+  
+  <!-- Root React Mounting Node -->
+  <div id="root">
+    <!-- Initial Loading State with Official Logo -->
+    <div class="min-h-screen flex flex-col items-center justify-center bg-[#0B0708] text-white p-4">
+      <div class="h-16 px-4 py-2 rounded-2xl bg-white/95 border border-[#E2BA65]/50 flex items-center justify-center shadow-[0_0_35px_rgba(112,1,4,0.6)] animate-pulse">
+        <img src="assets/logo.png" alt="vmccc.films" class="h-12 w-auto object-contain" />
+      </div>
+      <p class="mt-4 text-xs tracking-[0.25em] text-[#E2BA65] uppercase font-mono">
+        Loading vmccc.films_ • Wedding Content Creators
+      </p>
+    </div>
+  </div>
+
+  <!-- Single Bundled React Application (Transpiled by Babel) -->
+  <script type="text/babel" src="js/bundle.js"></script>
+
+</body>
+</html>
