@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VMCCC.FILMS | MAKE YOUR MOMENTS LOOK LIKE A MOVIE</title>
   
-  <meta name="description" content="VMCCC.FILMS — MAKE YOUR MOMENTS LOOK LIKE A MOVIE. SHOOT • EDIT • DELIVER. Cinematic 4K films delivered on-site in 10 minutes. Slot booking hotline: 8341667106." />
-  <meta name="keywords" content="VMCCC.FILMS, vmccc films, vmccc.films_, make your moments look like a movie, shoot edit deliver, cinematic films, wedding reels, 8341667106" />
-  <meta name="author" content="vmccc.films_" />
+  <meta name="description" content="VMCCC.FILMS — MAKE YOUR MOMENTS LOOK LIKE A MOVIE. SHOOT • EDIT • DELIVER. Cinematic 4K films delivered on-site in 10 minutes. Instagram: @vmccc.films. Slot booking hotline: 8341667106." />
+  <meta name="keywords" content="VMCCC.FILMS, vmccc films, vmccc.films, make your moments look like a movie, shoot edit deliver, cinematic films, wedding reels, 8341667106" />
+  <meta name="author" content="vmccc.films" />
   <meta name="theme-color" content="#700104" />
 
   <!-- Open Graph / Facebook -->
@@ -28,16 +28,25 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              burgundy: '#700104',
-              burgundyLight: '#94101E',
+            maroon: {
+              DEFAULT: '#700104',
+              dark: '#4A0002',
+              light: '#8D0E1C',
               crimson: '#A31526',
-              gold: '#E2BA65',
+              50: '#FDF2F3',
+              100: '#FCE7E9',
+              200: '#F8D0D4'
+            },
+            brand: {
+              maroon: '#700104',
+              maroonDark: '#4A0002',
+              maroonLight: '#94101E',
+              gold: '#C29B38',
               goldLight: '#F3E5C8',
-              goldDark: '#B88E35',
-              noir: '#0B0708',
-              card: '#160B0E',
-              border: 'rgba(226, 186, 101, 0.15)'
+              goldDark: '#9E782F',
+              paper: '#FAF8F6',
+              card: '#FFFFFF',
+              charcoal: '#1A1A1A'
             }
           },
           fontFamily: {
@@ -58,16 +67,16 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body class="bg-[#0B0708] text-white antialiased selection:bg-[#700104] selection:text-[#F3E5C8]">
+<body class="bg-white text-neutral-900 antialiased selection:bg-[#700104] selection:text-white">
   
   <!-- Root React Mounting Node -->
   <div id="root">
-    <!-- Initial Loading State with Official Logo -->
-    <div class="min-h-screen flex flex-col items-center justify-center bg-[#0B0708] text-white p-4">
-      <div class="h-16 px-4 py-2 rounded-2xl bg-white/95 border border-[#E2BA65]/50 flex items-center justify-center shadow-[0_0_35px_rgba(112,1,4,0.6)] animate-pulse">
-        <img src="assets/logo.png" alt="vmccc.films" class="h-12 w-auto object-contain" />
+    <!-- Initial Loading State with Official Logo on Pure White -->
+    <div class="min-h-screen flex flex-col items-center justify-center bg-white text-neutral-900 p-4">
+      <div class="h-20 flex items-center justify-center animate-pulse">
+        <img src="assets/logo.png" alt="vmccc.films" class="h-16 w-auto object-contain" />
       </div>
-      <p class="mt-4 text-xs tracking-[0.25em] text-[#E2BA65] uppercase font-mono">
+      <p class="mt-4 text-xs tracking-[0.25em] text-[#700104] uppercase font-mono font-bold">
         VMCCC.FILMS • MAKE YOUR MOMENTS LOOK LIKE A MOVIE
       </p>
     </div>

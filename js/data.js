@@ -5,8 +5,8 @@
 window.VMCCC_DATA = {
   brand: {
     name: "vmccc.films",
-    handle: "@vmccc.films_",
-    instagramUrl: "https://www.instagram.com/vmccc.films_/",
+    handle: "@vmccc.films",
+    instagramUrl: "https://www.instagram.com/vmccc.films/",
     title: "VMCCC.FILMS | MAKE YOUR MOMENTS LOOK LIKE A MOVIE",
     tagline: "MAKE YOUR MOMENTS LOOK LIKE A MOVIE",
     submotto: "SHOOT • EDIT • DELIVER",
@@ -32,7 +32,7 @@ window.VMCCC_DATA = {
     // About Us official manifesto
     aboutText: {
       title: "ABOUT US",
-      handle: "vmccc.films_",
+      handle: "vmccc.films",
       p1: "We capture and share the unique stories and moments of couples on their special day.",
       p2: "We understand the significance of the little moments and strive to make your moments look like a movie through stunning visuals, heartfelt narratives and fun BTS.",
       p3: "Let us turn your celebration into a cherished keepsake."
@@ -98,7 +98,7 @@ window.VMCCC_DATA = {
       views: "1.4M",
       likes: "128K",
       duration: "0:30",
-      audio: "vmccc.films_ • Romantic Original Audio",
+      audio: "vmccc.films • Romantic Original Audio",
       poster: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
       client: "Aanya & Kabir • Wedding Story",
       turnaround: "Delivered in 12 mins on-site"
@@ -114,7 +114,7 @@ window.VMCCC_DATA = {
       views: "2.8M",
       likes: "245K",
       duration: "0:25",
-      audio: "vmccc.films_ • Acoustic Strings",
+      audio: "vmccc.films • Acoustic Strings",
       poster: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80",
       client: "Rhea & Dev • Palace Wedding",
       turnaround: "Delivered during Reception"
@@ -130,7 +130,7 @@ window.VMCCC_DATA = {
       views: "1.9M",
       likes: "162K",
       duration: "0:28",
-      audio: "vmccc.films_ • Sangeet Beat Drop",
+      audio: "vmccc.films • Sangeet Beat Drop",
       poster: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80",
       client: "Sangeet Dance Night",
       turnaround: "Delivered before dinner service"
@@ -146,7 +146,7 @@ window.VMCCC_DATA = {
       views: "3.1M",
       likes: "290K",
       duration: "0:22",
-      audio: "vmccc.films_ • Playful Acoustic BTS",
+      audio: "vmccc.films • Playful Acoustic BTS",
       poster: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
       client: "Bridal Suite & Groom BTS",
       turnaround: "Delivered in 10 mins"
@@ -162,7 +162,7 @@ window.VMCCC_DATA = {
       views: "2.4M",
       likes: "210K",
       duration: "0:30",
-      audio: "vmccc.films_ • Grand Royalty Strings",
+      audio: "vmccc.films • Grand Royalty Strings",
       poster: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
       client: "Taj Falaknuma Varmala",
       turnaround: "Delivered right after Varmala"
@@ -379,7 +379,7 @@ window.VMCCC_DATA = {
       name: "Aanya & Kabir",
       role: "Bride & Groom • Royal Lake Palace",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
-      content: "vmccc.films_ made our wedding day unforgettable! While traditional videographers make you wait months, vmccc AirDropped 3 beautiful 4K reels while our reception party was still alive. Our family and friends watched it right there!",
+      content: "VMCCC.FILMS made our wedding day unforgettable! While traditional videographers make you wait months, vmccc AirDropped 3 beautiful 4K reels while our reception party was still alive. Our family and friends watched it right there!",
       rating: 5,
       type: "Wedding Couple"
     },
