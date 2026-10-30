@@ -379,7 +379,7 @@ window.VMCCC_DATA = {
       name: "Aanya & Kabir",
       role: "Bride & Groom • Royal Lake Palace",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
-      content: "VMCCC.FILMS made our wedding day unforgettable! While traditional videographers make you wait months, vmccc AirDropped 3 beautiful 4K reels while our reception party was still alive. Our family and friends watched it right there!",
+      content: "vmccc.films made our wedding day unforgettable! While traditional videographers make you wait months, vmccc AirDropped 3 beautiful 4K reels while our reception party was still alive. Our family and friends watched it right there!",
       rating: 5,
       type: "Wedding Couple"
     },

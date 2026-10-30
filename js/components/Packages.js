@@ -1,6 +1,5 @@
 // =========================================================
-// Packages Component — VMCCC.FILMS (White & Maroon Luxury Theme)
-// Instagram ID: @vmccc.films | Hotline: 8341667106
+// Packages Component — vmccc.films (Burgundy & Gold Theme)
 // =========================================================
 
 function Packages({ onSelectPackage }) {
@@ -10,52 +9,52 @@ function Packages({ onSelectPackage }) {
   const currentList = packageData[activeTab] || [];
 
   return (
-    <section id="packages" className="py-20 md:py-28 relative border-t border-[#700104]/10 bg-white">
+    <section id="packages" className="py-20 md:py-28 relative border-t border-[#E2BA65]/15 bg-gradient-to-b from-transparent via-[#700104]/10 to-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#700104]/20 bg-[#700104]/5 text-[#700104] text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#E2BA65]/35 bg-[#700104]/30 text-[#F3E5C8] text-xs font-semibold uppercase tracking-wider mb-3">
             Transparent Pricing • Cherished Keepsakes
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-neutral-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
             Curated Packages for Every <br />
-            <span className="text-[#700104] font-serif-luxury italic">
-              Celebration & Story
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F3E5C8] via-[#E2BA65] to-[#B88E35] font-serif-luxury italic">
+              Celebration & Love Story
             </span>
           </h2>
-          <p className="mt-4 text-base text-neutral-600 font-normal leading-relaxed">
-            Zero hidden charges. Certified cinema filmmakers with iPhone 16 Pro Max rigs. Color-graded on-site with same-day AirDrop delivery.
+          <p className="mt-4 text-base text-neutral-400 font-light leading-relaxed">
+            Zero hidden charges. Certified cinema filmmakers with iPhone 16 Pro Max cinema rigs. Color-graded on-site with same-day AirDrop delivery.
           </p>
 
           {/* Pricing Tabs Switcher */}
-          <div className="mt-8 inline-flex p-1.5 rounded-full bg-[#FAF8F6] border border-neutral-200 shadow-sm">
+          <div className="mt-8 inline-flex p-1.5 rounded-full bg-white/[0.05] border border-[#E2BA65]/25 backdrop-blur-md">
             <button
               onClick={() => setActiveTab("wedding")}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === "wedding"
-                  ? 'bg-[#700104] text-white shadow-md'
-                  : 'text-neutral-600 hover:text-neutral-900'
+                  ? 'bg-gradient-to-r from-[#700104] to-[#94101E] text-white border border-[#E2BA65]/50 shadow-[0_0_20px_rgba(112,1,4,0.5)]'
+                  : 'text-neutral-400 hover:text-white'
               }`}
             >
               Wedding Moments & Keepsakes
             </button>
             <button
               onClick={() => setActiveTab("hourly")}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === "hourly"
-                  ? 'bg-[#700104] text-white shadow-md'
-                  : 'text-neutral-600 hover:text-neutral-900'
+                  ? 'bg-gradient-to-r from-[#700104] to-[#94101E] text-white border border-[#E2BA65]/50 shadow-[0_0_20px_rgba(112,1,4,0.5)]'
+                  : 'text-neutral-400 hover:text-white'
               }`}
             >
               Hourly & Instant Content
             </button>
             <button
               onClick={() => setActiveTab("business")}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === "business"
-                  ? 'bg-[#700104] text-white shadow-md'
-                  : 'text-neutral-600 hover:text-neutral-900'
+                  ? 'bg-gradient-to-r from-[#700104] to-[#94101E] text-white border border-[#E2BA65]/50 shadow-[0_0_20px_rgba(112,1,4,0.5)]'
+                  : 'text-neutral-400 hover:text-white'
               }`}
             >
               Commercial & Brands
@@ -68,55 +67,55 @@ function Packages({ onSelectPackage }) {
           {currentList.map((pkg) => (
             <div
               key={pkg.id}
-              className={`rounded-3xl p-8 flex flex-col justify-between relative transition-all duration-300 bg-white ${
+              className={`rounded-3xl p-8 flex flex-col justify-between relative transition-all duration-300 ${
                 pkg.highlighted
-                  ? 'border-2 border-[#700104] shadow-[0_15px_40px_rgba(112,1,4,0.15)] md:-translate-y-2'
-                  : 'border border-[#700104]/15 shadow-sm hover:shadow-xl hover:border-[#700104]/40'
+                  ? 'glass-card border-2 border-[#E2BA65]/60 shadow-[0_0_40px_rgba(112,1,4,0.35)] scale-100 md:-translate-y-2'
+                  : 'glass-card border border-[#E2BA65]/15 hover:border-[#E2BA65]/35'
               }`}
             >
               {/* Badge if available */}
               {pkg.badge && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <span className="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#700104] text-white shadow-md border border-white/40">
+                  <span className="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-gradient-to-r from-[#700104] via-[#94101E] to-[#B51B2B] text-[#F3E5C8] shadow-lg border border-[#E2BA65]/50">
                     {pkg.badge}
                   </span>
                 </div>
               )}
 
               <div>
-                <p className="text-xs font-bold text-[#700104] uppercase tracking-wider mb-2">
+                <p className="text-xs font-semibold text-[#E2BA65] uppercase tracking-wider mb-2">
                   {pkg.tagline}
                 </p>
 
-                <h3 className="text-2xl font-bold text-neutral-900 mb-3">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   {pkg.name}
                 </h3>
 
-                <p className="text-xs text-neutral-600 font-normal mb-6 leading-relaxed">
+                <p className="text-xs text-neutral-300 font-light mb-6 leading-relaxed">
                   {pkg.description}
                 </p>
 
                 {/* Price Display */}
-                <div className="mb-6 pb-6 border-b border-neutral-100">
+                <div className="mb-6 pb-6 border-b border-white/10">
                   <div className="flex items-baseline gap-1.5">
-                    <span className="text-lg font-bold text-[#700104]">₹</span>
-                    <span className="text-4xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight font-heading">
+                    <span className="text-lg font-medium text-[#E2BA65]">₹</span>
+                    <span className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-heading">
                       {pkg.price}
                     </span>
                   </div>
-                  <span className="text-xs text-neutral-500 font-medium block mt-1">
+                  <span className="text-xs text-neutral-400 block mt-1">
                     {pkg.unit}
                   </span>
                 </div>
 
                 {/* Deliverables Checklist */}
                 <div className="space-y-3.5 mb-8">
-                  <p className="text-xs font-bold text-neutral-800 uppercase tracking-wider">
+                  <p className="text-xs font-bold text-neutral-200 uppercase tracking-wider">
                     What's Included:
                   </p>
                   {pkg.deliverables.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2.5 text-xs text-neutral-700 font-normal">
-                      <div className="w-4 h-4 rounded-full bg-[#700104]/10 text-[#700104] font-bold flex items-center justify-center shrink-0 mt-0.5 border border-[#700104]/20">
+                    <div key={idx} className="flex items-start gap-2.5 text-xs text-neutral-300 font-light">
+                      <div className="w-4 h-4 rounded-full bg-[#700104]/40 text-[#E2BA65] flex items-center justify-center shrink-0 mt-0.5 border border-[#E2BA65]/30">
                         ✓
                       </div>
                       <span className="leading-snug">{item}</span>
@@ -131,8 +130,8 @@ function Packages({ onSelectPackage }) {
                   onClick={() => onSelectPackage(pkg)}
                   className={`w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 ${
                     pkg.highlighted
-                      ? 'btn-primary shadow-md'
-                      : 'bg-[#FAF2F3] hover:bg-[#700104] text-[#700104] hover:text-white border border-[#700104]/25 shadow-sm'
+                      ? 'btn-primary shadow-lg'
+                      : 'bg-white/10 hover:bg-[#700104] text-white border border-[#E2BA65]/30'
                   }`}
                 >
                   <span>Book This Plan</span>
@@ -145,11 +144,11 @@ function Packages({ onSelectPackage }) {
         </div>
 
         {/* Slot Hotline Note */}
-        <div className="mt-16 text-center text-xs text-neutral-600 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <div className="mt-16 text-center text-xs text-neutral-300 flex flex-col sm:flex-row items-center justify-center gap-3">
           <span>Need custom destination wedding coverage or recurring brand shoots?</span>
           <a
             href="tel:8341667106"
-            className="text-[#700104] hover:text-[#94101E] font-bold underline underline-offset-4 flex items-center gap-1"
+            className="text-[#E2BA65] hover:text-white font-bold underline underline-offset-4 flex items-center gap-1"
           >
             <span>Call Slot Hotline: 8341667106</span>
             <span>→</span>

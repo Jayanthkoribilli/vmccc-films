@@ -57,7 +57,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-neutral-900 flex flex-col relative selection:bg-[#700104] selection:text-white">
+    <div className="min-h-screen bg-[#0B0708] text-white flex flex-col relative selection:bg-[#700104] selection:text-[#F3E5C8]">
       
       {/* Navigation Header */}
       <window.Navbar 

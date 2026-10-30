@@ -1,27 +1,19 @@
 /* =========================================================
-   VMCCC.FILMS — Luxury White & Maroon Theme
-   Palette inspired by official logo: Pure White & Deep Maroon
+   vmccc.films — Luxury Burgundy & Champagne Gold Theme
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --color-maroon: #700104;
-  --color-maroon-dark: #4A0002;
-  --color-maroon-light: #94101E;
-  --color-crimson: #B51B2B;
-  --color-maroon-soft: #FDF2F3;
-  --color-maroon-tint: #FAF0F1;
-  --color-gold: #C29B38;
+  --color-burgundy: #700104;
+  --color-burgundy-light: #94101E;
+  --color-crimson: #A31526;
+  --color-gold: #E2BA65;
   --color-gold-light: #F3E5C8;
-  --color-gold-dark: #9E782F;
-  --bg-white: #FFFFFF;
-  --bg-warm: #FAF8F6;
-  --bg-soft: #F5EFEB;
-  --text-dark: #1A1A1A;
-  --text-muted: #5A5A5A;
-  --border-maroon: rgba(112, 1, 4, 0.12);
-  --border-maroon-focus: rgba(112, 1, 4, 0.35);
+  --color-gold-dark: #B88E35;
+  --bg-noir: #0B0708;
+  --bg-noir-card: rgba(22, 12, 15, 0.7);
+  --border-glass: rgba(226, 186, 101, 0.15);
 }
 
 * {
@@ -31,29 +23,29 @@
 
 body {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #FFFFFF;
-  color: #1A1A1A;
+  background-color: #0B0708;
+  color: #f3f4f6;
   overflow-x: hidden;
 }
 
 ::selection {
   background: #700104;
-  color: #FFFFFF;
+  color: #F3E5C8;
 }
 
-/* Custom Scrollbar in Maroon */
+/* Custom Scrollbar in Burgundy */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF8F6;
+  background: #0B0708;
 }
 ::-webkit-scrollbar-thumb {
   background: #700104;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94101E;
+  background: #A31526;
 }
 
 /* Typography Headings */
@@ -66,43 +58,43 @@ h1, h2, h3, .font-heading {
   font-family: 'Playfair Display', serif;
 }
 
-/* Glassmorphism Classes for Light Theme */
+/* Glassmorphism Classes */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(112, 1, 4, 0.1);
-  box-shadow: 0 10px 30px -5px rgba(112, 1, 4, 0.05);
+  background: rgba(18, 9, 12, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(226, 186, 101, 0.12);
 }
 
 .glass-card {
-  background: #FFFFFF;
-  border: 1px solid rgba(112, 1, 4, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(135deg, rgba(35, 15, 20, 0.45) 0%, rgba(15, 7, 10, 0.6) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 186, 101, 0.1);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  border-color: rgba(112, 1, 4, 0.28);
+  border-color: rgba(226, 186, 101, 0.35);
   transform: translateY(-4px);
-  box-shadow: 0 16px 36px -6px rgba(112, 1, 4, 0.12), 0 0 1px rgba(112, 1, 4, 0.2);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.9), 0 0 25px -2px rgba(112, 1, 4, 0.3);
 }
 
-/* Maroon Luxury Primary Button */
+/* Burgundy Neon Glow Button */
 .btn-primary {
-  background: linear-gradient(135deg, #700104 0%, #8D0E1C 50%, #A31526 100%);
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #700104 0%, #94101E 50%, #B51B2B 100%);
+  color: #ffffff;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 18px rgba(112, 1, 4, 0.28);
-  border: 1px solid rgba(112, 1, 4, 0.2);
+  box-shadow: 0 4px 20px rgba(112, 1, 4, 0.45);
+  border: 1px solid rgba(226, 186, 101, 0.25);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 6px 26px rgba(112, 1, 4, 0.45);
+  box-shadow: 0 6px 30px rgba(163, 21, 38, 0.6);
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #5B0002 0%, #700104 100%);
+  border-color: rgba(226, 186, 101, 0.5);
 }
 
 .btn-primary::after {
@@ -115,7 +107,7 @@ h1, h2, h3, .font-heading {
   background: linear-gradient(
     60deg,
     transparent,
-    rgba(255, 255, 255, 0.25),
+    rgba(226, 186, 101, 0.25),
     transparent
   );
   transform: rotate(30deg) translateY(-100%);
@@ -126,36 +118,21 @@ h1, h2, h3, .font-heading {
   transform: rotate(30deg) translateY(100%);
 }
 
-/* Outline Button */
-.btn-outline {
-  background: #FFFFFF;
-  color: #700104;
-  border: 1.5px solid #700104;
-  transition: all 0.25s ease;
-}
-
-.btn-outline:hover {
-  background: #700104;
-  color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(112, 1, 4, 0.25);
-  transform: translateY(-1px);
-}
-
 /* Gold Button */
 .btn-gold {
-  background: linear-gradient(135deg, #D4AF37 0%, #C29B38 50%, #9E782F 100%);
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #D4AF37 0%, #E2BA65 50%, #B88E35 100%);
+  color: #0B0708;
   font-weight: 700;
-  box-shadow: 0 4px 18px rgba(194, 155, 56, 0.35);
+  box-shadow: 0 4px 18px rgba(226, 186, 101, 0.35);
   transition: all 0.3s ease;
 }
 
 .btn-gold:hover {
-  box-shadow: 0 6px 24px rgba(194, 155, 56, 0.55);
+  box-shadow: 0 6px 24px rgba(226, 186, 101, 0.55);
   transform: translateY(-2px);
 }
 
-/* Ambient Radial Glows in Soft Maroon Blush */
+/* Ambient Radial Glows in Logo Burgundy */
 .ambient-glow-top {
   position: absolute;
   top: 0;
@@ -164,7 +141,7 @@ h1, h2, h3, .font-heading {
   width: 100%;
   max-width: 1200px;
   height: 650px;
-  background: radial-gradient(circle at 50% 0%, rgba(112, 1, 4, 0.05) 0%, rgba(112, 1, 4, 0.02) 40%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(112, 1, 4, 0.32) 0%, rgba(112, 1, 4, 0.1) 45%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -173,9 +150,9 @@ h1, h2, h3, .font-heading {
   position: absolute;
   width: 750px;
   height: 750px;
-  background: radial-gradient(circle, rgba(112, 1, 4, 0.035) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(112, 1, 4, 0.18) 0%, transparent 65%);
   pointer-events: none;
-  filter: blur(100px);
+  filter: blur(110px);
   z-index: 0;
 }
 
@@ -201,10 +178,10 @@ h1, h2, h3, .font-heading {
   aspect-ratio: 9 / 19.5;
   border-radius: 46px;
   padding: 11px;
-  background: #FFFFFF;
-  box-shadow: 0 25px 60px -15px rgba(112, 1, 4, 0.2),
-              0 0 0 1px rgba(112, 1, 4, 0.15),
-              0 0 40px rgba(112, 1, 4, 0.08);
+  background: #150b0e;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95),
+              0 0 0 1px rgba(226, 186, 101, 0.2),
+              0 0 40px rgba(112, 1, 4, 0.35);
 }
 
 .phone-screen {
@@ -227,7 +204,7 @@ h1, h2, h3, .font-heading {
   background: #000;
   border-radius: 20px;
   z-index: 40;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 /* Instagram Embed Container inside 9:16 card */
