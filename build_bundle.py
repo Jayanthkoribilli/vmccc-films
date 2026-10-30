@@ -1,6 +1,7 @@
 import os
 
 components = [
+    "js/locationsData.js",
     "js/data.js",
     "js/components/Navbar.js",
     "js/components/Hero.js",

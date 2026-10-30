@@ -175,11 +175,11 @@ window.VMCCC_DATA = {
         id: "quick-shoot",
         name: "Quick Shoot",
         tagline: "For a single viral reel",
-        price: "1,999",
+        price: "1,500",
         unit: "+ GST · per shoot",
         badge: "Fastest Turnaround",
         highlighted: false,
-        formValue: "Hourly - Quick Shoot (₹1,999)",
+        formValue: "Hourly - Quick Shoot (₹1,500)",
         description: "1 hour of dedicated on-site shooting and editing for one hyper-polished Instagram reel.",
         deliverables: [
           "Up to 1 hour of professional coverage",
@@ -344,7 +344,7 @@ window.VMCCC_DATA = {
     },
     {
       feature: "Starting Price",
-      vmccc: "Transparent from ₹1,999",
+      vmccc: "Transparent from ₹1,500",
       traditional: "₹25,000+ with hidden add-ons",
       winner: "vmccc"
     },

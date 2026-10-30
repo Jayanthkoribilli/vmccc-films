@@ -41,8 +41,8 @@ function ConfirmationModal({ bookingData, onClose }) {
             <span className="font-semibold text-white">{bookingData.phone}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-neutral-400">City / Venue:</span>
-            <span className="font-semibold text-white">{bookingData.city}</span>
+            <span className="text-neutral-400">Location:</span>
+            <span className="font-semibold text-white">{bookingData.displayLocation || bookingData.city}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-neutral-400">Event Date:</span>

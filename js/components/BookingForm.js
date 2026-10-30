@@ -1,17 +1,25 @@
 // =========================================================
-// Booking Form Component — vmccc.films (Updated with 8341667106)
+// Booking Form Component — VMCCC.FILMS
+// Dynamic State -> District -> City/Town Selector for All India
+// Default Example: State: Andhra Pradesh, District: NTR District, City: Vijayawada
+// Hotline: 8341667106
 // =========================================================
 
 function BookingForm({ selectedPackage, onBookingComplete }) {
   const brand = window.VMCCC_DATA.brand;
+  const locations = window.INDIAN_LOCATIONS || {};
 
+  // Default values matching user's exact example: Andhra Pradesh -> NTR District -> Vijayawada
   const [formData, setFormData] = React.useState({
     fullName: "",
     phone: "",
     email: "",
-    city: "Hyderabad",
+    state: "Andhra Pradesh",
+    district: "NTR District",
+    city: "Vijayawada",
+    customCity: "",
     date: "",
-    timeSlot: "Evening Golden Hour (4:00 PM - 7:00 PM)",
+    timeSlot: "Evening Golden Hour & Varmala (4:30 PM - 8:30 PM)",
     packageChoice: selectedPackage ? selectedPackage.formValue : "Wedding - Moments Basic (₹14,999)",
     instagram: "",
     notes: ""
@@ -28,9 +36,65 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
     }
   }, [selectedPackage]);
 
+  // Derived options based on current selections
+  const availableStates = Object.keys(locations);
+  const availableDistricts = formData.state && locations[formData.state] ? Object.keys(locations[formData.state]) : [];
+  const availableCities = formData.state && formData.district && locations[formData.state] && locations[formData.state][formData.district]
+    ? locations[formData.state][formData.district]
+    : [];
+
+  const handleStateChange = (e) => {
+    const newState = e.target.value;
+    const districtsForState = locations[newState] ? Object.keys(locations[newState]) : [];
+    const defaultDistrict = districtsForState[0] || "";
+    const citiesForDistrict = defaultDistrict && locations[newState] && locations[newState][defaultDistrict] 
+      ? locations[newState][defaultDistrict] 
+      : [];
+    const defaultCity = citiesForDistrict[0] || "";
+
+    setFormData(prev => ({
+      ...prev,
+      state: newState,
+      district: defaultDistrict,
+      city: defaultCity,
+      customCity: ""
+    }));
+  };
+
+  const handleDistrictChange = (e) => {
+    const newDistrict = e.target.value;
+    const citiesForDistrict = formData.state && locations[formData.state] && locations[formData.state][newDistrict]
+      ? locations[formData.state][newDistrict]
+      : [];
+    const defaultCity = citiesForDistrict[0] || "";
+
+    setFormData(prev => ({
+      ...prev,
+      district: newDistrict,
+      city: defaultCity,
+      customCity: ""
+    }));
+  };
+
+  const handleCityChange = (e) => {
+    const newCity = e.target.value;
+    setFormData(prev => ({
+      ...prev,
+      city: newCity,
+      customCity: newCity.includes("Other") ? prev.customCity : ""
+    }));
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const getLocationDisplay = () => {
+    const town = (formData.city.includes("Other") && formData.customCity) 
+      ? formData.customCity 
+      : formData.city;
+    return `${town}, ${formData.district}, ${formData.state}`;
   };
 
   const handleWhatsAppBooking = (e) => {
@@ -40,7 +104,9 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
       return;
     }
 
-    const message = `Hello vmccc.films! 🎥%0A%0AI would like to book a slot for a wedding / cinematic shoot:%0A• Client Name: ${encodeURIComponent(formData.fullName)}%0A• Mobile: ${encodeURIComponent(formData.phone)}%0A• City: ${encodeURIComponent(formData.city)}%0A• Event Date: ${encodeURIComponent(formData.date || "Next available")}%0A• Preferred Slot: ${encodeURIComponent(formData.timeSlot)}%0A• Package: ${encodeURIComponent(formData.packageChoice)}%0A• Instagram: ${encodeURIComponent(formData.instagram || "N/A")}%0A• Notes: ${encodeURIComponent(formData.notes || "None")}%0A%0APlease confirm slot availability!`;
+    const locationText = getLocationDisplay();
+
+    const message = `Hello vmccc.films! 🎥%0A%0AI would like to book a slot for a wedding / cinematic shoot:%0A• Client Name: ${encodeURIComponent(formData.fullName)}%0A• Mobile: ${encodeURIComponent(formData.phone)}%0A• State: ${encodeURIComponent(formData.state)}%0A• District: ${encodeURIComponent(formData.district)}%0A• City / Town: ${encodeURIComponent(formData.customCity || formData.city)}%0A• Event Date: ${encodeURIComponent(formData.date || "Next available")}%0A• Preferred Slot: ${encodeURIComponent(formData.timeSlot)}%0A• Package: ${encodeURIComponent(formData.packageChoice)}%0A• Instagram: ${encodeURIComponent(formData.instagram || "N/A")}%0A• Notes: ${encodeURIComponent(formData.notes || "None")}%0A%0APlease confirm slot availability!`;
 
     const whatsappUrl = `https://wa.me/918341667106?text=${message}`;
     window.open(whatsappUrl, '_blank');
@@ -56,9 +122,14 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
-      onBookingComplete(formData);
+      onBookingComplete({
+        ...formData,
+        displayLocation: getLocationDisplay()
+      });
     }, 1000);
   };
+
+  const isOtherCitySelected = formData.city && formData.city.includes("Other");
 
   return (
     <section id="booking-section" className="py-20 md:py-28 relative border-t border-[#E2BA65]/15 bg-gradient-to-b from-[#0B0708] via-[#160A0D] to-[#0B0708]">
@@ -129,6 +200,7 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
         <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-[#E2BA65]/20 shadow-2xl">
           <form className="space-y-6">
             
+            {/* Row 1: Full Name & Mobile */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               
               {/* Full Name */}
@@ -168,22 +240,113 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
                 </div>
               </div>
 
-              {/* City Selection */}
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">
-                  Event City / Venue *
-                </label>
-                <select
-                  name="city"
-                  value={formData.city}
-                  onChange={handleChange}
-                  className="w-full bg-[#160B0E] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E2BA65] transition-colors"
-                >
-                  {brand.activeCities.map(c => (
-                    <option key={c} value={c}>{c}</option>
-                  ))}
-                </select>
+            </div>
+
+            {/* =========================================================
+                Row 2: Dynamic Location Selectors (State -> District -> City)
+                Preserves seamless booking with full Indian coverage
+               ========================================================= */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#14080B] border border-[#E2BA65]/25 space-y-4">
+              <div className="flex items-center justify-between border-b border-white/10 pb-2.5">
+                <div className="flex items-center gap-2">
+                  <span className="text-sm">📍</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#E2BA65]">
+                    Event Location Details
+                  </span>
+                </div>
+                <span className="text-[11px] text-neutral-400">
+                  Select State, District &amp; City/Town
+                </span>
               </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                
+                {/* 1. State Dropdown */}
+                <div>
+                  <label className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+                    State *
+                  </label>
+                  <select
+                    name="state"
+                    value={formData.state}
+                    onChange={handleStateChange}
+                    className="w-full bg-[#1A0C10] border border-white/15 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#E2BA65] transition-colors"
+                  >
+                    {availableStates.map(stateName => (
+                      <option key={stateName} value={stateName}>
+                        {stateName}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* 2. District Dropdown (Dynamically filtered by State) */}
+                <div>
+                  <label className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+                    District *
+                  </label>
+                  <select
+                    name="district"
+                    value={formData.district}
+                    onChange={handleDistrictChange}
+                    className="w-full bg-[#1A0C10] border border-white/15 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#E2BA65] transition-colors"
+                  >
+                    {availableDistricts.map(districtName => (
+                      <option key={districtName} value={districtName}>
+                        {districtName}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* 3. City / Town Dropdown (Dynamically filtered by District) */}
+                <div>
+                  <label className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+                    City / Town *
+                  </label>
+                  <select
+                    name="city"
+                    value={formData.city}
+                    onChange={handleCityChange}
+                    className="w-full bg-[#1A0C10] border border-white/15 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#E2BA65] transition-colors"
+                  >
+                    {availableCities.map(cityName => (
+                      <option key={cityName} value={cityName}>
+                        {cityName}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+              </div>
+
+              {/* Supplementary Custom City/Town Input if Other is chosen */}
+              {isOtherCitySelected && (
+                <div className="pt-2 animate-fadeIn">
+                  <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#E2BA65] mb-1">
+                    Specific Town / Mandal / Venue Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="customCity"
+                    required
+                    placeholder="Enter your specific town, village, or wedding hall name"
+                    value={formData.customCity}
+                    onChange={handleChange}
+                    className="w-full bg-[#1A0C10] border border-[#E2BA65]/40 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#E2BA65]"
+                  />
+                </div>
+              )}
+
+              {/* Selected Location Confirmation Pill */}
+              <div className="flex items-center gap-2 text-[11px] text-[#F3E5C8] bg-white/[0.03] px-3 py-1.5 rounded-lg border border-white/5">
+                <span className="text-[#E2BA65] font-bold">Selected Venue:</span>
+                <span>{getLocationDisplay()}</span>
+              </div>
+            </div>
+
+            {/* Row 3: Date, Time Slot & Package Choice */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
 
               {/* Shoot Date */}
               <div>
@@ -219,7 +382,7 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
                 </select>
               </div>
 
-              {/* Package Choice */}
+              {/* Package Choice (Updated with Starting Price ₹1,500) */}
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">
                   Package
@@ -230,10 +393,10 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
                   onChange={handleChange}
                   className="w-full bg-[#160B0E] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E2BA65] transition-colors"
                 >
+                  <option value="Hourly - Quick Shoot (₹1,500)">Hourly - Quick Shoot (₹1,500)</option>
                   <option value="Wedding - Moments Basic (₹14,999)">Wedding - Moments Basic (₹14,999)</option>
                   <option value="Wedding - Royal Celebration (₹39,999)">Wedding - Royal Celebration (₹39,999)</option>
                   <option value="Wedding - Imperial Luxe (₹79,999)">Wedding - Imperial Luxe (₹79,999)</option>
-                  <option value="Hourly - Quick Shoot (₹1,999)">Hourly - Quick Shoot (₹1,999)</option>
                   <option value="Half Day - Creator Sprint (₹4,999)">Half Day - Creator Sprint (₹4,999)</option>
                   <option value="Full Day - Content Sprint (₹9,999)">Full Day - Content Sprint (₹9,999)</option>
                   <option value="Business - Brand Spotlight (₹12,499)">Business - Brand Spotlight (₹12,499)</option>
@@ -261,12 +424,12 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
 
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">
-                  Special Couple Story / Songs
+                  Ceremony Notes &amp; Special Requests
                 </label>
                 <input
                   type="text"
                   name="notes"
-                  placeholder="Specific romantic songs, entry moments or vibes"
+                  placeholder="e.g. Groom entry smoke fireworks, Bride solo bridal walk"
                   value={formData.notes}
                   onChange={handleChange}
                   className="w-full bg-[#160B0E] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#E2BA65] transition-colors"
@@ -274,39 +437,41 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
               </div>
             </div>
 
-            {/* Dual CTAs: WhatsApp Direct & Online Reserve */}
-            <div className="pt-4 flex flex-col sm:flex-row gap-4">
+            {/* Submit Action Buttons */}
+            <div className="pt-4 flex flex-col sm:flex-row gap-4 items-center justify-between border-t border-white/10">
               
-              <button
-                type="button"
-                onClick={handleWhatsAppBooking}
-                className="flex-1 py-4 px-6 rounded-xl font-bold text-xs uppercase tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2.5 transition-all shadow-lg"
-              >
-                <span>Book Slot on WhatsApp (8341667106)</span>
-                <span>↗</span>
-              </button>
+              <div className="text-xs text-neutral-400 text-center sm:text-left">
+                <span className="text-emerald-400 font-semibold">⚡ Instant Slot Lock</span> &bull; 100% on-site delivery guarantee &bull; Hotline: 8341667106
+              </div>
 
-              <button
-                type="submit"
-                onClick={handleDirectReserve}
-                disabled={isSubmitting}
-                className="flex-1 btn-primary py-4 px-6 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2"
-              >
-                {isSubmitting ? (
-                  <span>Securing Slot...</span>
-                ) : (
-                  <>
-                    <span>Confirm Shoot Online</span>
-                    <span>→</span>
-                  </>
-                )}
-              </button>
+              <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                <button
+                  type="button"
+                  onClick={handleWhatsAppBooking}
+                  className="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center gap-2"
+                >
+                  <span>Chat &amp; Reserve via WhatsApp</span>
+                  <span>↗</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleDirectReserve}
+                  disabled={isSubmitting}
+                  className="btn-primary px-8 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2"
+                >
+                  {isSubmitting ? (
+                    <span>Confirming Slot...</span>
+                  ) : (
+                    <>
+                      <span>Reserve Shoot Slot</span>
+                      <span>→</span>
+                    </>
+                  )}
+                </button>
+              </div>
 
             </div>
-
-            <p className="text-[11px] text-center text-neutral-400 font-light pt-2">
-              🔒 10-minute on-site reel delivery guarantee • AirDrop directly to couple on ceremony day.
-            </p>
 
           </form>
         </div>
@@ -315,4 +480,5 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
     </section>
   );
 }
+
 window.BookingForm = BookingForm;
