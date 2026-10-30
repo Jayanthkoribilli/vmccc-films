@@ -24,7 +24,7 @@ function Packages({ onSelectPackage }) {
             </span>
           </h2>
           <p className="mt-4 text-base text-neutral-400 font-light leading-relaxed">
-            Zero hidden charges. Certified wedding content creators with iPhone 16 Pro Max cinema rigs. Color-graded on-site with same-day AirDrop delivery.
+            Zero hidden charges. Certified cinema filmmakers with iPhone 16 Pro Max cinema rigs. Color-graded on-site with same-day AirDrop delivery.
           </p>
 
           {/* Pricing Tabs Switcher */}

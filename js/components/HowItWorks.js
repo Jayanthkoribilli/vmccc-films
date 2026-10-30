@@ -67,7 +67,7 @@ function HowItWorks({ onBookClick }) {
           <div className="space-y-1 text-center sm:text-left">
             <h4 className="text-lg font-bold text-white">Ready to preserve your special day?</h4>
             <p className="text-sm text-neutral-300 font-light">
-              Wedding content creators on standby across Hyderabad, Mumbai, Delhi, Bengaluru & Goa.
+              Cinematic filmmakers and speed-editors on standby across Hyderabad, Mumbai, Delhi, Bengaluru & Goa.
             </p>
           </div>
           <div className="flex items-center gap-3">

@@ -1,4 +1,4 @@
-// --- js/data.js ---
+// --- File: js/data.js ---
 // =========================================================
 // vmccc.films — Centralized Data & Content Store (Updated)
 // =========================================================
@@ -8,15 +8,16 @@ window.VMCCC_DATA = {
     name: "vmccc.films",
     handle: "@vmccc.films_",
     instagramUrl: "https://www.instagram.com/vmccc.films_/",
-    title: "vmccc.films | Wedding Content Creators & Cinematic Films",
-    tagline: "Cherished Keepsakes. Cinematic Reels in 10 Minutes.",
-    subheading: "As wedding content creators, we capture and share the unique stories and moments of couples on their special day. We tell your love story through stunning visuals, heartfelt narratives and fun BTS.",
+    title: "VMCCC.FILMS | MAKE YOUR MOMENTS LOOK LIKE A MOVIE",
+    tagline: "MAKE YOUR MOMENTS LOOK LIKE A MOVIE",
+    submotto: "SHOOT • EDIT • DELIVER",
+    subheading: "We capture and share the unique stories and moments of couples on their special day. We make your moments look like a movie through stunning visuals, heartfelt narratives and fun BTS.",
     
     // Official Slot Booking Details
     phone: "8341667106",
     phoneDisplay: "+91 8341667106",
     callUrl: "tel:8341667106",
-    whatsappUrl: "https://wa.me/918341667106?text=Hi%20vmccc.films!%20I%20would%20like%20to%20book%20a%20slot%20for%20our%20wedding%20%2F%20event%20cinematic%20reel%20shoot.",
+    whatsappUrl: "https://wa.me/918341667106?text=Hi%20vmccc.films!%20I%20would%20like%20to%20book%20a%20slot%20for%20our%20cinematic%20reel%20shoot.",
     email: "vmccc.films@gmail.com",
 
     // Official Image Assets
@@ -26,14 +27,15 @@ window.VMCCC_DATA = {
     logoWhite: "assets/logo_white.png",
     instagramQr: "assets/instagram_qr.png",
     aboutCard: "assets/about_card.jpg",
+    movieCard: "assets/movie_card.jpg",
     featuredVideo: "assets/vamcyyy.mp4",
 
     // About Us official manifesto
     aboutText: {
       title: "ABOUT US",
       handle: "vmccc.films_",
-      p1: "As wedding content creators, we capture and share the unique stories and moments of couples on their special day.",
-      p2: "We understand the significance of the little moments and strive to tell your love story through stunning visuals, heartfelt narratives and fun BTS.",
+      p1: "We capture and share the unique stories and moments of couples on their special day.",
+      p2: "We understand the significance of the little moments and strive to make your moments look like a movie through stunning visuals, heartfelt narratives and fun BTS.",
       p3: "Let us turn your celebration into a cherished keepsake."
     },
 
@@ -48,9 +50,9 @@ window.VMCCC_DATA = {
 
   stats: [
     { value: "10 Mins", label: "On-Site Reel Delivery", sub: "Cut, graded & dropped live" },
-    { value: "4.9 ★", label: "Couples & Brand Rating", sub: "Across 2,400+ authentic reviews" },
-    { value: "1,50,000+", label: "Reels & BTS Delivered", sub: "Cherished wedding keepsakes" },
-    { value: "100%", label: "Heartfelt Narratives", sub: "Shot on iPhone 16 Pro Max ProRes" }
+    { value: "4K 60FPS", label: "Cinema Quality Standard", sub: "Shot on iPhone 16 Pro Max ProRes" },
+    { value: "1,50,000+", label: "Reels & BTS Delivered", sub: "Cherished cinematic keepsakes" },
+    { value: "100%", label: "Heartfelt Narratives", sub: "SHOOT • EDIT • DELIVER" }
   ],
 
   howItWorks: [
@@ -248,7 +250,7 @@ window.VMCCC_DATA = {
           "Same-day reel export to post on Instagram stories",
           "Couple portrait & aesthetic slow-mo shots (120fps)",
           "Entire raw iPhone 16 Pro reel archive via AirDrop",
-          "Formal attire wedding content creator"
+          "Formal attire professional cinema filmmaker"
         ]
       },
       {
@@ -438,8 +440,8 @@ window.VMCCC_DATA = {
       a: "Our creators are trained speed-editors equipped with high-performance mobile editing setups (iPad Pro M4 and iPhone 16 Pro Max). Using custom pre-calibrated cinematic LUTs, instant clip trimming, and trending audio, we grade and export your reels right beside you before your celebration wraps."
     },
     {
-      q: "What makes wedding content creation different from traditional videography?",
-      a: "Traditional videographers shoot heavy landscape footage for 2-hour long documentary videos delivered months later. As wedding content creators, vmccc.films focuses on capturing the little moments, heartfelt vows, and fun BTS in vertical 9:16 format — delivered on-site so you can share your joy on Instagram while it's still happening!"
+      q: "What makes VMCCC.FILMS different from traditional videography?",
+      a: "Traditional videographers shoot heavy landscape footage for 2-hour long documentary videos delivered months later. VMCCC.FILMS focuses on capturing the little moments, heartfelt vows, and fun BTS in vertical 9:16 format — color-graded and delivered on-site in 10 minutes so you can share your joy on Instagram while it's still happening!"
     },
     {
       q: "What equipment do vmccc.films creators use?",
@@ -457,7 +459,7 @@ window.VMCCC_DATA = {
 };
 
 
-// --- js/components/Navbar.js ---
+// --- File: js/components/Navbar.js ---
 // =========================================================
 // Navbar Component — vmccc.films (Updated with Logo & 8341667106)
 // =========================================================
@@ -504,7 +506,7 @@ function Navbar({ onBookClick, onOpenQrModal }) {
         </div>
         <span className="text-white/40 hidden sm:inline">•</span>
         <span className="hidden md:inline text-white/90">
-          Wedding Content Creators • Reels Delivered in 10 Minutes
+          ⚡ 10-Min On-Site Delivery • SHOOT • EDIT • DELIVER
         </span>
         <a 
           href={brand.whatsappUrl} 
@@ -536,10 +538,10 @@ function Navbar({ onBookClick, onOpenQrModal }) {
             </div>
             <div className="hidden sm:flex flex-col">
               <span className="font-heading font-extrabold text-lg tracking-tight text-white group-hover:text-[#E2BA65] transition-colors">
-                vmccc<span className="text-[#A31526]">.films</span>
+                VMCCC<span className="text-[#A31526]">.FILMS</span>
               </span>
-              <span className="text-[9px] font-medium tracking-[0.25em] text-[#E2BA65] uppercase -mt-0.5">
-                Wedding Content Creators
+              <span className="text-[8.5px] font-bold tracking-[0.2em] text-[#E2BA65] uppercase -mt-0.5">
+                MAKE YOUR MOMENTS LOOK LIKE A MOVIE
               </span>
             </div>
           </a>
@@ -668,49 +670,19 @@ function Navbar({ onBookClick, onOpenQrModal }) {
 window.Navbar = Navbar;
 
 
-// --- js/components/Hero.js ---
+// --- File: js/components/Hero.js ---
 // =========================================================
-// Hero Component — vmccc.films (Updated Burgundy/Gold & 8341667106)
+// Hero Component — VMCCC.FILMS
+// Tagline: MAKE YOUR MOMENTS LOOK LIKE A MOVIE
+// Sub-motto: SHOOT • EDIT • DELIVER
+// Hotline: 8341667106
 // =========================================================
 
 function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
-  const [isPlaying, setIsPlaying] = React.useState(true);
-  const [isMuted, setIsMuted] = React.useState(true);
-  const [liked, setLiked] = React.useState(false);
-  const [likeCount, setLikeCount] = React.useState(148500);
   const [selectedCity, setSelectedCity] = React.useState("Hyderabad");
   const [shootDate, setShootDate] = React.useState("");
   const [checkResult, setCheckResult] = React.useState(null);
-  const videoRef = React.useRef(null);
   const brand = window.VMCCC_DATA.brand;
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play().catch(() => {});
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
-
-  const handleLike = () => {
-    if (!liked) {
-      setLiked(true);
-      setLikeCount(prev => prev + 1);
-    } else {
-      setLiked(false);
-      setLikeCount(prev => prev - 1);
-    }
-  };
 
   const handleCheckAvailability = (e) => {
     e.preventDefault();
@@ -722,9 +694,10 @@ function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
 
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#0B0708]">
-      {/* Ambient background glows in burgundy */}
+      {/* Ambient background glows in burgundy and champagne gold */}
       <div className="ambient-glow-top"></div>
       <div className="ambient-glow-center top-1/4 left-1/4"></div>
+      <div className="absolute top-1/3 right-10 w-96 h-96 bg-[#700104]/20 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -732,30 +705,31 @@ function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
           {/* Left Column: Headline, Value Proposition, Action */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            {/* Eyebrow Pill with Official Handle */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#E2BA65]/35 bg-[#700104]/25 backdrop-blur-md">
+            {/* Eyebrow Pill with Official Brand & Sub-motto */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E2BA65]/35 bg-[#700104]/25 backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-[#E2BA65] animate-ping"></span>
               <span className="w-2 h-2 rounded-full bg-[#E2BA65] -ml-4"></span>
               <span className="text-xs font-semibold tracking-wider uppercase text-[#F3E5C8]">
-                Wedding Content Creators • @vmccc.films_
+                VMCCC.FILMS • SHOOT • EDIT • DELIVER
               </span>
             </div>
 
-            {/* Main Title */}
+            {/* Main Title featuring user's exact tagline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
-              Capturing Moments Into <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F3E5C8] via-[#E2BA65] to-[#B88E35] font-serif-luxury italic">
-                Cherished Keepsakes.
+              <span className="block text-2xl sm:text-3xl md:text-4xl font-heading tracking-widest text-white uppercase mb-2">
+                VMCCC.FILMS
               </span>
-              <br />
-              <span className="text-2xl sm:text-3xl md:text-4xl font-light text-neutral-300">
-                Wedding Reels in 10 Minutes.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F3E5C8] via-[#E2BA65] to-[#B88E35] font-serif-luxury italic block">
+                MAKE YOUR MOMENTS LOOK LIKE A MOVIE.
+              </span>
+              <span className="text-xs sm:text-sm font-semibold tracking-[0.3em] text-[#E2BA65] uppercase block mt-3 font-mono">
+                SHOOT • EDIT • DELIVER
               </span>
             </h1>
 
-            {/* Official Manifesto from Uploaded Card */}
+            {/* Official Manifesto */}
             <p className="text-base sm:text-lg text-neutral-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-              As wedding content creators, we capture and share the unique stories of couples on their special day. We tell your love story through stunning visuals, heartfelt narratives and fun BTS — delivered on-site while the magic is still alive.
+              We capture and share the unique stories of couples and special celebrations on their day. We tell your story through stunning visuals, heartfelt narratives and fun BTS — color-graded and delivered on-site in 10 minutes.
             </p>
 
             {/* Slot Booking Hotline Bar */}
@@ -808,7 +782,7 @@ function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
                 <div className="w-6 h-6 rounded-full bg-[#700104] flex items-center justify-center text-[#E2BA65] text-xs">
                   ▶
                 </div>
-                <span>Watch Wedding Reels</span>
+                <span>Watch Cinematic Reels</span>
               </button>
             </div>
 
@@ -860,150 +834,98 @@ function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
               )}
             </div>
 
-            {/* Trust Metric Micro-Bar */}
+            {/* Trust Metric Micro-Bar (No reviews) */}
             <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-neutral-400">
-              <div className="flex items-center gap-1.5">
-                <span className="text-[#E2BA65] text-sm">★★★★★</span>
-                <span className="text-white font-semibold">4.9</span>
-                <span>(2,400+ couples & clients)</span>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-white font-semibold">⚡ 10-Min Live Delivery Guarantee</span>
               </div>
               <span className="text-neutral-600">•</span>
               <div className="flex items-center gap-1.5">
-                <span className="text-white font-medium">10-Min Live Delivery Guarantee</span>
+                <span className="text-[#E2BA65] font-semibold">SHOOT • EDIT • DELIVER</span>
               </div>
               <span className="text-neutral-600 hidden sm:inline">•</span>
               <div className="text-neutral-300 font-medium hidden sm:block">
-                Shot on iPhone 16 Pro Max
+                Shot on iPhone 16 Pro Max ProRes
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: Interactive iPhone Mockup displaying Reel */}
-          <div className="lg:col-span-5 flex justify-center relative">
+          {/* Right Column: Aesthetic Brand Movie Card & Showcase (Top Video removed as requested) */}
+          <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
             
-            {/* Ambient behind phone */}
-            <div className="absolute inset-0 bg-[#700104]/30 rounded-full blur-[90px] -z-10"></div>
+            {/* Ambient behind card */}
+            <div className="absolute inset-0 bg-[#700104]/35 rounded-3xl blur-[80px] -z-10"></div>
 
-            <div className="phone-mockup">
-              <div className="phone-island"></div>
+            {/* Cinema Identity Card Container */}
+            <div className="w-full max-w-md glass-panel p-3 sm:p-4 rounded-3xl border border-[#E2BA65]/35 shadow-[0_0_50px_rgba(112,1,4,0.4)] relative group hover:border-[#E2BA65]/60 transition-all duration-500">
               
-              <div className="phone-screen group relative">
-                {/* Real Video from assets/vamcyyy.mp4 */}
-                <video
-                  ref={videoRef}
-                  className="w-full h-full object-cover"
-                  src="assets/vamcyyy.mp4"
-                  playsInline
-                  autoPlay
-                  loop
-                  muted={isMuted}
+              {/* Corner Accents */}
+              <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#E2BA65]"></div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#E2BA65]"></div>
+              <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#E2BA65]"></div>
+              <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#E2BA65]"></div>
+
+              {/* Exact Tagline Card Image Provided by User */}
+              <div className="rounded-2xl overflow-hidden border border-[#E2BA65]/20 shadow-2xl relative bg-black">
+                <img
+                  src="assets/movie_card.jpg"
+                  alt="VMCCC.FILMS - MAKE YOUR MOMENTS LOOK LIKE A MOVIE - SHOOT EDIT DELIVER"
+                  className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
                 />
+              </div>
 
-                {/* Top Overlay Badge */}
-                <div className="absolute top-12 left-4 right-4 flex items-center justify-between z-30">
-                  <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-[#E2BA65]/30">
-                    <span className="w-2 h-2 rounded-full bg-[#E2BA65] animate-pulse"></span>
-                    <span className="text-[10px] font-semibold text-white uppercase tracking-wider">
-                      vmccc.films_ 4K
-                    </span>
+              {/* Interactive Booking & Action Bar Under Card */}
+              <div className="mt-4 p-3 rounded-2xl bg-[#0B0708]/80 border border-white/10 space-y-3">
+                <div className="flex items-center justify-between text-xs px-1">
+                  <div className="flex items-center gap-1.5 text-neutral-300">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span>Ready for Booking</span>
                   </div>
+                  <span className="text-[#E2BA65] font-semibold text-[11px] uppercase tracking-wider">
+                    Pan-India Service
+                  </span>
+                </div>
 
-                  <button
-                    onClick={toggleMute}
-                    className="w-8 h-8 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white hover:bg-black/90 transition-colors"
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="tel:8341667106"
+                    className="py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#700104] to-[#94101E] hover:from-[#94101E] hover:to-[#B51B2B] text-white text-xs font-bold transition-all shadow text-center flex items-center justify-center gap-1.5 border border-[#E2BA65]/30"
                   >
-                    {isMuted ? "🔇" : "🔊"}
-                  </button>
+                    <span>📞 8341667106</span>
+                  </a>
+
+                  <a
+                    href={brand.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow text-center flex items-center justify-center gap-1.5"
+                  >
+                    <span>💬 WhatsApp</span>
+                  </a>
                 </div>
 
-                {/* Center Play/Pause button on tap */}
-                <div 
-                  onClick={togglePlay}
-                  className="absolute inset-0 flex items-center justify-center cursor-pointer z-20"
+                <button
+                  onClick={onBookClick}
+                  className="w-full btn-primary py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg flex items-center justify-center gap-1.5"
                 >
-                  {!isPlaying && (
-                    <div className="w-14 h-14 rounded-full bg-black/70 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-2xl">
-                      <svg className="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
-                        <polygon points="5 3 19 12 5 21 5 3" />
-                      </svg>
-                    </div>
-                  )}
-                </div>
-
-                {/* Right Instagram Actions Column */}
-                <div className="absolute right-3 bottom-24 flex flex-col items-center gap-4 z-30">
-                  {/* Like Button */}
-                  <div className="flex flex-col items-center">
-                    <button
-                      onClick={handleLike}
-                      className={`w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md transition-all ${
-                        liked ? 'bg-[#700104] text-white scale-110' : 'bg-black/50 text-white hover:bg-black/70'
-                      }`}
-                    >
-                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                      </svg>
-                    </button>
-                    <span className="text-[11px] font-semibold text-white mt-1 drop-shadow-md">
-                      {(likeCount / 1000).toFixed(1)}k
-                    </span>
-                  </div>
-
-                  {/* Comment Button */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
-                    </div>
-                    <span className="text-[11px] font-semibold text-white mt-1 drop-shadow-md">2.1k</span>
-                  </div>
-
-                  {/* Share Button */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white">
-                      <svg className="w-5 h-5 -rotate-12 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                      </svg>
-                    </div>
-                    <span className="text-[11px] font-semibold text-white mt-1 drop-shadow-md">Share</span>
-                  </div>
-                </div>
-
-                {/* Bottom Instagram Captions Overlay */}
-                <div className="absolute left-3 right-16 bottom-5 z-30 text-left space-y-1.5">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-full overflow-hidden bg-white flex items-center justify-center p-0.5 border border-[#E2BA65]">
-                      <img src="assets/logo.png" alt="logo" className="w-full h-full object-contain" />
-                    </div>
-                    <span className="text-xs font-bold text-white drop-shadow-md">vmccc.films_</span>
-                    <span className="px-1.5 py-0.2 rounded text-[9px] bg-[#700104] text-[#F3E5C8] font-medium border border-[#E2BA65]/30">Verified</span>
-                  </div>
-
-                  <p className="text-[11px] text-neutral-200 font-light leading-snug line-clamp-2 drop-shadow-md">
-                    "Telling your love story through stunning visuals, heartfelt narratives & fun BTS ✨"
-                  </p>
-
-                  <div className="flex items-center gap-1.5 text-[10px] text-[#E2BA65] font-medium">
-                    <span>♫</span>
-                    <span className="truncate">vmccc.films_ • Romantic Vows Original Audio</span>
-                  </div>
-                </div>
-
-                <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none z-10"></div>
+                  <span>Reserve Date Online</span>
+                  <span>→</span>
+                </button>
               </div>
-            </div>
 
-            {/* Floating Hotline Badge next to phone */}
-            <div className="hidden sm:flex absolute -bottom-6 -left-8 glass-panel px-4 py-3 rounded-2xl border border-[#E2BA65]/30 shadow-2xl items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#700104] border border-[#E2BA65]/40 flex items-center justify-center text-white font-bold text-base">
-                📞
+              {/* Floating Badges */}
+              <div className="absolute -bottom-4 -left-3 glass-panel px-3.5 py-2 rounded-xl border border-[#E2BA65]/30 shadow-xl hidden sm:flex items-center gap-2">
+                <span className="text-base">⚡</span>
+                <span className="text-[11px] font-bold text-white">10-Min Delivery</span>
               </div>
-              <div className="flex flex-col text-left">
-                <span className="text-xs font-bold text-white">Call 8341667106</span>
-                <span className="text-[10px] text-[#E2BA65]">Instant Slot Reservation</span>
+
+              <div className="absolute -top-3 -right-3 glass-panel px-3 py-1.5 rounded-xl border border-[#E2BA65]/30 shadow-xl hidden sm:flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#E2BA65] animate-pulse"></span>
+                <span className="text-[10px] font-bold text-[#F3E5C8] uppercase tracking-wider">4K ProRes</span>
               </div>
+
             </div>
 
           </div>
@@ -1034,7 +956,7 @@ function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
 window.Hero = Hero;
 
 
-// --- js/components/AboutUs.js ---
+// --- File: js/components/AboutUs.js ---
 // =========================================================
 // About Us Component — vmccc.films (Using uploaded About Us card & QR)
 // =========================================================
@@ -1051,14 +973,14 @@ function AboutUs({ onBookClick }) {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E2BA65]/30 bg-[#700104]/20 backdrop-blur-md mb-4">
             <span className="w-2 h-2 rounded-full bg-[#E2BA65]"></span>
             <span className="text-xs font-semibold tracking-widest uppercase text-[#F3E5C8]">
-              Wedding Content Creators
+              SHOOT • EDIT • DELIVER
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            About <span className="font-serif-luxury italic text-[#E2BA65]">vmccc.films_</span>
+            About <span className="font-serif-luxury italic text-[#E2BA65]">VMCCC.FILMS</span>
           </h2>
           <p className="mt-4 text-base text-neutral-400 font-light leading-relaxed">
-            Turning celebrations into cherished keepsakes through stunning visuals, heartfelt narratives and fun BTS.
+            MAKE YOUR MOMENTS LOOK LIKE A MOVIE — turning celebrations into cherished keepsakes through stunning visuals, heartfelt narratives and fun BTS.
           </p>
         </div>
 
@@ -1075,7 +997,7 @@ function AboutUs({ onBookClick }) {
             <div className="w-full md:w-56 shrink-0 rounded-2xl overflow-hidden border-2 border-[#E2BA65]/40 shadow-xl group">
               <img
                 src="assets/about_card.jpg"
-                alt="About vmccc.films_"
+                alt="About VMCCC.FILMS"
                 className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
@@ -1085,19 +1007,19 @@ function AboutUs({ onBookClick }) {
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#E2BA65]">
                 <span>Our Philosophy</span>
                 <span>•</span>
-                <span className="text-neutral-400">Cherished Keepsakes</span>
+                <span className="text-neutral-400">MAKE YOUR MOMENTS LOOK LIKE A MOVIE</span>
               </div>
 
               <h3 className="text-2xl font-bold text-white leading-tight font-serif-luxury italic">
-                "We capture the unique stories of couples on their special day."
+                "We capture the unique stories of couples and celebrations."
               </h3>
 
               <div className="space-y-3 text-xs sm:text-sm text-neutral-300 font-light leading-relaxed">
                 <p>
-                  As wedding content creators, we understand the profound significance of the little moments. From spontaneous bridal suite giggles to intimate vows and electric sangeet dance floors.
+                  We understand the profound significance of the little moments. From spontaneous bridal suite giggles to intimate vows and electric celebration dance floors.
                 </p>
                 <p>
-                  We strive to tell your love story through <strong className="text-white font-medium">stunning visuals</strong>, <strong className="text-white font-medium">heartfelt narratives</strong>, and <strong className="text-white font-medium">fun BTS</strong> — delivered on-site within 10 to 15 minutes.
+                  We strive to make your moments look like a movie through <strong className="text-white font-medium">stunning visuals</strong>, <strong className="text-white font-medium">heartfelt narratives</strong>, and <strong className="text-white font-medium">fun BTS</strong> — delivered on-site within 10 to 15 minutes.
                 </p>
               </div>
 
@@ -1175,7 +1097,7 @@ function AboutUs({ onBookClick }) {
 window.AboutUs = AboutUs;
 
 
-// --- js/components/ReelShowcase.js ---
+// --- File: js/components/ReelShowcase.js ---
 // =========================================================
 // Reel Showcase Component — vmccc.films (With User's Real Reels)
 // =========================================================
@@ -1360,7 +1282,7 @@ function ReelShowcase({ onSelectReelForModal, onBookStyle }) {
 window.ReelShowcase = ReelShowcase;
 
 
-// --- js/components/HowItWorks.js ---
+// --- File: js/components/HowItWorks.js ---
 // =========================================================
 // How It Works Component — vmccc.films (Burgundy & Gold)
 // =========================================================
@@ -1430,7 +1352,7 @@ function HowItWorks({ onBookClick }) {
           <div className="space-y-1 text-center sm:text-left">
             <h4 className="text-lg font-bold text-white">Ready to preserve your special day?</h4>
             <p className="text-sm text-neutral-300 font-light">
-              Wedding content creators on standby across Hyderabad, Mumbai, Delhi, Bengaluru & Goa.
+              Cinematic filmmakers and speed-editors on standby across Hyderabad, Mumbai, Delhi, Bengaluru & Goa.
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -1456,7 +1378,7 @@ function HowItWorks({ onBookClick }) {
 window.HowItWorks = HowItWorks;
 
 
-// --- js/components/Packages.js ---
+// --- File: js/components/Packages.js ---
 // =========================================================
 // Packages Component — vmccc.films (Burgundy & Gold Theme)
 // =========================================================
@@ -1483,7 +1405,7 @@ function Packages({ onSelectPackage }) {
             </span>
           </h2>
           <p className="mt-4 text-base text-neutral-400 font-light leading-relaxed">
-            Zero hidden charges. Certified wedding content creators with iPhone 16 Pro Max cinema rigs. Color-graded on-site with same-day AirDrop delivery.
+            Zero hidden charges. Certified cinema filmmakers with iPhone 16 Pro Max cinema rigs. Color-graded on-site with same-day AirDrop delivery.
           </p>
 
           {/* Pricing Tabs Switcher */}
@@ -1621,7 +1543,7 @@ function Packages({ onSelectPackage }) {
 window.Packages = Packages;
 
 
-// --- js/components/Calculator.js ---
+// --- File: js/components/Calculator.js ---
 // =========================================================
 // Interactive Shoot Cost Estimator — vmccc.films
 // =========================================================
@@ -1882,7 +1804,7 @@ function Calculator({ onApplyCustomQuote }) {
 window.Calculator = Calculator;
 
 
-// --- js/components/Comparison.js ---
+// --- File: js/components/Comparison.js ---
 // =========================================================
 // Comparison Component — vmccc.films (Burgundy & Gold Theme)
 // =========================================================
@@ -1902,11 +1824,11 @@ function Comparison({ onBookClick }) {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
             Why Modern Couples Choose <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F3E5C8] via-[#E2BA65] to-[#B88E35] font-serif-luxury italic">
-              vmccc.films_ Wedding Creators
+              VMCCC.FILMS
             </span>
           </h2>
           <p className="mt-4 text-base text-neutral-400 font-light leading-relaxed">
-            See how our mobile wedding content creation outpaces traditional videographers in speed, heart, and social media virality.
+            See how VMCCC.FILMS outpaces traditional videographers in speed, cinematic quality, and 10-minute on-site delivery.
           </p>
         </div>
 
@@ -1974,7 +1896,7 @@ function Comparison({ onBookClick }) {
 window.Comparison = Comparison;
 
 
-// --- js/components/GearSpotlight.js ---
+// --- File: js/components/GearSpotlight.js ---
 // =========================================================
 // Gear Spotlight Component — vmccc.films
 // =========================================================
@@ -2057,99 +1979,7 @@ function GearSpotlight() {
 window.GearSpotlight = GearSpotlight;
 
 
-// --- js/components/Testimonials.js ---
-// =========================================================
-// Testimonials Component — vmccc.films
-// =========================================================
-
-function Testimonials() {
-  const testimonials = window.VMCCC_DATA.testimonials;
-
-  return (
-    <section className="py-20 md:py-28 relative border-t border-white/5 bg-gradient-to-b from-transparent via-white/[0.01] to-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-red-500 mb-3">
-            Client Stories
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Loved by 2,400+ Creators, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-400">
-              Couples & High-Growth Brands
-            </span>
-          </h2>
-          <p className="mt-4 text-base text-neutral-400 font-light leading-relaxed">
-            See how our 10-minute on-site cinema service transformed social engagement for weddings and commercial campaigns.
-          </p>
-        </div>
-
-        {/* Testimonials Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t, idx) => (
-            <div
-              key={idx}
-              className="glass-card rounded-3xl p-8 flex flex-col justify-between border border-white/10 hover:border-red-500/30 relative"
-            >
-              <div>
-                {/* Star rating */}
-                <div className="flex items-center gap-1 text-amber-400 text-sm mb-4">
-                  {[...Array(t.rating)].map((_, i) => (
-                    <span key={i}>★</span>
-                  ))}
-                  <span className="text-xs text-neutral-400 ml-2 font-mono">5.0</span>
-                </div>
-
-                {/* Content */}
-                <p className="text-sm text-neutral-300 font-light leading-relaxed mb-6 italic">
-                  "{t.content}"
-                </p>
-              </div>
-
-              {/* Author Info */}
-              <div className="pt-6 border-t border-white/10 flex items-center gap-3.5">
-                <img
-                  src={t.avatar}
-                  alt={t.name}
-                  className="w-11 h-11 rounded-full object-cover border border-red-500/30"
-                  loading="lazy"
-                />
-                <div>
-                  <h4 className="text-sm font-bold text-white">{t.name}</h4>
-                  <p className="text-xs text-neutral-400">{t.role}</p>
-                </div>
-                <span className="ml-auto px-2 py-0.5 rounded text-[9px] font-semibold bg-white/5 text-neutral-400 border border-white/10">
-                  {t.type}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Live Brands Marquee Ticker */}
-        <div className="mt-16 pt-8 border-t border-white/5 overflow-hidden relative">
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400 mb-6">
-            Featured Across Leading Labels & Creators
-          </p>
-          <div className="flex gap-12 items-center justify-center flex-wrap opacity-60">
-            <span className="font-heading font-extrabold text-lg tracking-wider text-neutral-400">VOGUE INDIA</span>
-            <span className="font-heading font-extrabold text-lg tracking-wider text-neutral-400">WEDMEGOOD</span>
-            <span className="font-heading font-extrabold text-lg tracking-wider text-neutral-400">GQ STYLES</span>
-            <span className="font-heading font-extrabold text-lg tracking-wider text-neutral-400">GRAZIA</span>
-            <span className="font-heading font-extrabold text-lg tracking-wider text-neutral-400">ZOMATO DINING</span>
-            <span className="font-heading font-extrabold text-lg tracking-wider text-neutral-400">LIFESTYLE ASIA</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  );
-}
-window.Testimonials = Testimonials;
-
-
-// --- js/components/BookingForm.js ---
+// --- File: js/components/BookingForm.js ---
 // =========================================================
 // Booking Form Component — vmccc.films (Updated with 8341667106)
 // =========================================================
@@ -2470,459 +2300,7 @@ function BookingForm({ selectedPackage, onBookingComplete }) {
 window.BookingForm = BookingForm;
 
 
-// --- js/components/ReelModal.js ---
-// =========================================================
-// Reel Fullscreen Modal Component — vmccc.films (With Real Instagram Link)
-// =========================================================
-
-function ReelModal({ reel, onClose, onBookReelStyle }) {
-  if (!reel) return null;
-
-  React.useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose]);
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-2xl animate-fadeIn">
-      
-      {/* Close button outside */}
-      <button
-        onClick={onClose}
-        className="absolute top-6 right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all z-50 text-xl font-bold"
-      >
-        ✕
-      </button>
-
-      {/* Modal Container */}
-      <div 
-        className="relative w-full max-w-md max-h-[90vh] overflow-y-auto rounded-3xl bg-[#12090B] border border-[#E2BA65]/35 shadow-[0_0_60px_rgba(112,1,4,0.4)] flex flex-col justify-between p-6 space-y-4"
-        onClick={(e) => e.stopPropagation()}
-      >
-        
-        {/* Top Header */}
-        <div className="flex items-center justify-between pb-3 border-b border-white/10">
-          <div className="flex items-center gap-2">
-            <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#700104] text-[#F3E5C8] border border-[#E2BA65]/30">
-              {reel.category}
-            </span>
-            <span className="text-xs text-neutral-300 font-medium">
-              {reel.turnaround}
-            </span>
-          </div>
-
-          <a
-            href="tel:8341667106"
-            className="text-xs font-bold text-[#E2BA65] hover:text-white flex items-center gap-1"
-          >
-            <span>📞 8341667106</span>
-          </a>
-        </div>
-
-        {/* Instagram Reel Container */}
-        <div className="relative aspect-[9/16] w-full rounded-2xl overflow-hidden bg-black border border-white/10 shadow-inner">
-          <iframe
-            src={reel.embedUrl || `https://www.instagram.com/reel/${reel.reelId}/embed/`}
-            className="w-full h-full"
-            frameBorder="0"
-            scrolling="no"
-            allowTransparency="true"
-            allow="encrypted-media"
-            title={reel.title}
-          />
-        </div>
-
-        {/* Bottom Details & Actions */}
-        <div className="space-y-3 pt-2 text-left">
-          
-          <div>
-            <div className="text-xs text-[#E2BA65] font-semibold">{reel.client}</div>
-            <h3 className="text-xl font-bold text-white mt-0.5 leading-tight">{reel.title}</h3>
-            <p className="text-xs text-neutral-300 mt-1 font-light leading-relaxed">
-              Shot by verified vmccc.films_ wedding content creators on iPhone 16 Pro Max. Color-graded with custom LUTs.
-            </p>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 pt-2">
-            <a
-              href={reel.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 py-3 px-4 rounded-xl text-xs font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 text-white flex items-center justify-center gap-1.5 shadow-md"
-            >
-              <span>Watch on Instagram</span>
-              <span>↗</span>
-            </a>
-
-            <button
-              onClick={() => onBookReelStyle(reel)}
-              className="flex-1 btn-primary py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5"
-            >
-              <span>Book This Style</span>
-              <span>→</span>
-            </button>
-          </div>
-
-          <div className="text-center pt-2">
-            <a
-              href="https://wa.me/918341667106?text=Hi%20vmccc.films!%20I%20loved%20this%20reel%20and%20want%20to%20book%20a%20similar%20wedding%20slot."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center justify-center gap-1.5"
-            >
-              <span>💬 Direct WhatsApp Slot Confirmation (8341667106)</span>
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  );
-}
-window.ReelModal = ReelModal;
-
-
-// --- js/components/QrModal.js ---
-// =========================================================
-// Instagram QR Modal Component — vmccc.films
-// =========================================================
-
-function QrModal({ isOpen, onClose }) {
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-xl animate-fadeIn">
-      <div className="relative w-full max-w-sm rounded-3xl p-6 sm:p-8 glass-panel border border-[#E2BA65]/40 shadow-[0_0_60px_rgba(112,1,4,0.4)] text-center space-y-4">
-        
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-5 right-5 text-neutral-400 hover:text-white text-lg font-bold"
-        >
-          ✕
-        </button>
-
-        <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#E2BA65]">
-          Official Instagram Profile
-        </span>
-
-        <h3 className="text-xl font-bold text-white font-serif-luxury italic">
-          @vmccc.films_
-        </h3>
-
-        <p className="text-xs text-neutral-300 font-light">
-          Scan this QR code with your phone camera to follow our latest wedding reels, BTS, and stories.
-        </p>
-
-        {/* QR Code Container */}
-        <div className="p-3 bg-white rounded-2xl shadow-xl max-w-[220px] mx-auto border-2 border-[#E2BA65]/50">
-          <img
-            src="assets/instagram_qr.png"
-            alt="Instagram QR VMCCC.FILMS"
-            className="w-full h-auto object-contain"
-          />
-        </div>
-
-        {/* Direct Link */}
-        <div className="pt-2">
-          <a
-            href="https://www.instagram.com/vmccc.films_/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full py-3 px-4 rounded-xl text-xs font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 text-white flex items-center justify-center gap-2 shadow-md"
-          >
-            <span>Open @vmccc.films_ on Instagram</span>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <p className="text-[11px] text-neutral-400">
-          Slot booking hotline: <a href="tel:8341667106" className="text-[#E2BA65] font-bold">8341667106</a>
-        </p>
-
-      </div>
-    </div>
-  );
-}
-window.QrModal = QrModal;
-
-
-// --- js/components/CreatorApplyModal.js ---
-// =========================================================
-// Creator Apply Modal Component — vmccc.films
-// =========================================================
-
-function CreatorApplyModal({ isOpen, onClose }) {
-  if (!isOpen) return null;
-
-  const [submitted, setSubmitted] = React.useState(false);
-  const [formData, setFormData] = React.useState({
-    name: "",
-    phone: "",
-    city: "Hyderabad",
-    phoneModel: "iPhone 16 Pro Max",
-    instagramUrl: "",
-    experience: "1-3 Years"
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl animate-fadeIn">
-      <div className="relative w-full max-w-lg rounded-3xl p-6 sm:p-8 glass-panel border border-white/20 shadow-2xl">
-        
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-6 right-6 text-neutral-400 hover:text-white text-lg font-bold"
-        >
-          ✕
-        </button>
-
-        {!submitted ? (
-          <div>
-            <div className="mb-6">
-              <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-600/20 text-red-400 border border-red-500/30">
-                Creator Collective Recruitment
-              </span>
-              <h3 className="text-2xl font-bold text-white mt-3">
-                Shoot with vmccc.films
-              </h3>
-              <p className="text-xs text-neutral-400 font-light mt-1">
-                Earn ₹40,000 - ₹1,20,000/month as a verified mobile cinema director in your city.
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Your full name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-[#121217] border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-red-500"
-                />
-              </div>
-
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1">
-                    WhatsApp Number
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    placeholder="+91 98765..."
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-[#121217] border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-red-500"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1">
-                    City
-                  </label>
-                  <select
-                    value={formData.city}
-                    onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="w-full bg-[#121217] border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-red-500"
-                  >
-                    {window.VMCCC_DATA.brand.activeCities.map(c => (
-                      <option key={c} value={c}>{c}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1">
-                    Primary Camera Device
-                  </label>
-                  <select
-                    value={formData.phoneModel}
-                    onChange={(e) => setFormData({ ...formData, phoneModel: e.target.value })}
-                    className="w-full bg-[#121217] border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-red-500"
-                  >
-                    <option value="iPhone 16 Pro Max">iPhone 16 Pro Max</option>
-                    <option value="iPhone 16 Pro">iPhone 16 Pro</option>
-                    <option value="iPhone 15 Pro Max">iPhone 15 Pro Max</option>
-                    <option value="iPhone 15 Pro">iPhone 15 Pro</option>
-                    <option value="Sony FX3 / FX30">Sony FX3 / Cinema Camera</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1">
-                    Reel Experience
-                  </label>
-                  <select
-                    value={formData.experience}
-                    onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
-                    className="w-full bg-[#121217] border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-red-500"
-                  >
-                    <option value="Under 1 Year">Under 1 Year</option>
-                    <option value="1-3 Years">1-3 Years</option>
-                    <option value="3+ Years">3+ Years Professional</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1">
-                  Instagram Profile / Portfolio Link
-                </label>
-                <input
-                  type="url"
-                  required
-                  placeholder="https://instagram.com/yourhandle"
-                  value={formData.instagramUrl}
-                  onChange={(e) => setFormData({ ...formData, instagramUrl: e.target.value })}
-                  className="w-full bg-[#121217] border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-red-500"
-                />
-              </div>
-
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  className="w-full btn-primary py-3 rounded-xl font-bold text-xs uppercase tracking-wider"
-                >
-                  Submit Creator Application
-                </button>
-              </div>
-            </form>
-          </div>
-        ) : (
-          <div className="text-center py-8 space-y-4">
-            <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mx-auto border border-emerald-500/30">
-              ✓
-            </div>
-            <h3 className="text-2xl font-bold text-white">Application Received!</h3>
-            <p className="text-xs text-neutral-300 max-w-sm mx-auto font-light leading-relaxed">
-              Our creative director will review your Instagram portfolio and contact you on WhatsApp within 24 hours for the 6-Tier audition shoot.
-            </p>
-            <button
-              onClick={() => {
-                setSubmitted(false);
-                onClose();
-              }}
-              className="px-6 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold"
-            >
-              Done
-            </button>
-          </div>
-        )}
-
-      </div>
-    </div>
-  );
-}
-window.CreatorApplyModal = CreatorApplyModal;
-
-
-// --- js/components/ConfirmationModal.js ---
-// =========================================================
-// Confirmation Modal Component — vmccc.films (Updated 8341667106)
-// =========================================================
-
-function ConfirmationModal({ bookingData, onClose }) {
-  if (!bookingData) return null;
-
-  const bookingRef = `VMCCC-${Math.floor(1000 + Math.random() * 9000)}`;
-
-  const whatsappConfirmationUrl = `https://wa.me/918341667106?text=Hi%20vmccc.films!%20I%20just%20reserved%20a%20slot%20online%20(Ref%3A%20${bookingRef})%20for%20${encodeURIComponent(bookingData.fullName)}.%20Please%20confirm!`;
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-xl animate-fadeIn">
-      <div className="relative w-full max-w-md rounded-3xl p-6 sm:p-8 glass-panel border border-[#E2BA65]/40 shadow-[0_0_60px_rgba(112,1,4,0.4)] text-center">
-        
-        {/* Animated Celebration Icon */}
-        <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-[#700104] to-[#B51B2B] text-white flex items-center justify-center text-3xl mx-auto shadow-lg mb-5 border border-[#E2BA65]/40">
-          ✨
-        </div>
-
-        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#E2BA65]">
-          Slot Reserved
-        </span>
-
-        <h3 className="text-2xl font-bold text-white mt-1 mb-2 font-serif-luxury italic">
-          Your Wedding Shoot is Locked!
-        </h3>
-
-        <p className="text-xs text-neutral-300 font-light mb-6">
-          Reference Code: <span className="font-mono font-bold text-white bg-white/10 px-2 py-0.5 rounded border border-[#E2BA65]/30">{bookingRef}</span>
-        </p>
-
-        {/* Shoot Summary Ticket */}
-        <div className="bg-[#160B0E] rounded-2xl p-4 border border-white/10 text-left space-y-2.5 text-xs mb-6">
-          <div className="flex justify-between">
-            <span className="text-neutral-400">Client:</span>
-            <span className="font-semibold text-white">{bookingData.fullName}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-neutral-400">WhatsApp:</span>
-            <span className="font-semibold text-white">{bookingData.phone}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-neutral-400">City / Venue:</span>
-            <span className="font-semibold text-white">{bookingData.city}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-neutral-400">Event Date:</span>
-            <span className="font-semibold text-white">{bookingData.date || "Next Available"}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-neutral-400">Package:</span>
-            <span className="font-semibold text-[#E2BA65]">{bookingData.packageChoice}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-neutral-400">Slot Hotline:</span>
-            <span className="font-semibold text-white">8341667106</span>
-          </div>
-        </div>
-
-        {/* Direct WhatsApp Confirmation CTA */}
-        <div className="space-y-3">
-          <a
-            href={whatsappConfirmationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 shadow"
-          >
-            <span>Confirm Instant on WhatsApp (8341667106)</span>
-            <span>↗</span>
-          </a>
-
-          <button
-            onClick={onClose}
-            className="w-full py-2.5 rounded-xl font-semibold text-xs text-neutral-400 hover:text-white"
-          >
-            Close Receipt
-          </button>
-        </div>
-
-      </div>
-    </div>
-  );
-}
-window.ConfirmationModal = ConfirmationModal;
-
-
-// --- js/components/FAQ.js ---
+// --- File: js/components/FAQ.js ---
 // =========================================================
 // FAQ Component — vmccc.films
 // =========================================================
@@ -2994,7 +2372,7 @@ function FAQ() {
 window.FAQ = FAQ;
 
 
-// --- js/components/Footer.js ---
+// --- File: js/components/Footer.js ---
 // =========================================================
 // Footer Component — vmccc.films (Updated Logo & 8341667106)
 // =========================================================
@@ -3034,14 +2412,14 @@ function Footer({ onBookClick, onOpenQrModal }) {
                 <span className="font-heading font-extrabold text-xl tracking-tight text-white">
                   vmccc<span className="text-[#A31526]">.films</span>
                 </span>
-                <span className="text-[10px] font-semibold tracking-[0.25em] text-[#E2BA65] uppercase">
-                  Wedding Content Creators
+                <span className="text-[9px] font-bold tracking-[0.2em] text-[#E2BA65] uppercase">
+                  MAKE YOUR MOMENTS LOOK LIKE A MOVIE
                 </span>
               </div>
             </div>
 
             <p className="text-xs text-neutral-300 font-light leading-relaxed max-w-md">
-              As wedding content creators, we capture and share the unique stories and moments of couples on their special day. Turning celebrations into cherished keepsakes through stunning visuals, heartfelt narratives and fun BTS.
+              We capture and share the unique stories and moments of couples on their special day. Turning celebrations into cherished keepsakes through stunning visuals, heartfelt narratives and fun BTS.
             </p>
 
             {/* Slot Hotline Box */}
@@ -3163,7 +2541,7 @@ function Footer({ onBookClick, onOpenQrModal }) {
         {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
           <div>
-            © 2026 <strong className="text-white">vmccc.films</strong>. Wedding Content Creators • Built with modern React.
+            © 2026 <strong className="text-white">vmccc.films</strong>. MAKE YOUR MOMENTS LOOK LIKE A MOVIE • SHOOT • EDIT • DELIVER.
           </div>
           <div className="flex items-center gap-6 text-neutral-400">
             <a href="tel:8341667106" className="text-[#E2BA65] font-semibold hover:underline">Slot Booking: 8341667106</a>
@@ -3178,7 +2556,278 @@ function Footer({ onBookClick, onOpenQrModal }) {
 window.Footer = Footer;
 
 
-// --- js/app.js ---
+// --- File: js/components/ReelModal.js ---
+// =========================================================
+// Reel Fullscreen Modal Component — vmccc.films (With Real Instagram Link)
+// =========================================================
+
+function ReelModal({ reel, onClose, onBookReelStyle }) {
+  if (!reel) return null;
+
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-2xl animate-fadeIn">
+      
+      {/* Close button outside */}
+      <button
+        onClick={onClose}
+        className="absolute top-6 right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all z-50 text-xl font-bold"
+      >
+        ✕
+      </button>
+
+      {/* Modal Container */}
+      <div 
+        className="relative w-full max-w-md max-h-[90vh] overflow-y-auto rounded-3xl bg-[#12090B] border border-[#E2BA65]/35 shadow-[0_0_60px_rgba(112,1,4,0.4)] flex flex-col justify-between p-6 space-y-4"
+        onClick={(e) => e.stopPropagation()}
+      >
+        
+        {/* Top Header */}
+        <div className="flex items-center justify-between pb-3 border-b border-white/10">
+          <div className="flex items-center gap-2">
+            <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#700104] text-[#F3E5C8] border border-[#E2BA65]/30">
+              {reel.category}
+            </span>
+            <span className="text-xs text-neutral-300 font-medium">
+              {reel.turnaround}
+            </span>
+          </div>
+
+          <a
+            href="tel:8341667106"
+            className="text-xs font-bold text-[#E2BA65] hover:text-white flex items-center gap-1"
+          >
+            <span>📞 8341667106</span>
+          </a>
+        </div>
+
+        {/* Instagram Reel Container */}
+        <div className="relative aspect-[9/16] w-full rounded-2xl overflow-hidden bg-black border border-white/10 shadow-inner">
+          <iframe
+            src={reel.embedUrl || `https://www.instagram.com/reel/${reel.reelId}/embed/`}
+            className="w-full h-full"
+            frameBorder="0"
+            scrolling="no"
+            allowTransparency="true"
+            allow="encrypted-media"
+            title={reel.title}
+          />
+        </div>
+
+        {/* Bottom Details & Actions */}
+        <div className="space-y-3 pt-2 text-left">
+          
+          <div>
+            <div className="text-xs text-[#E2BA65] font-semibold">{reel.client}</div>
+            <h3 className="text-xl font-bold text-white mt-0.5 leading-tight">{reel.title}</h3>
+            <p className="text-xs text-neutral-300 mt-1 font-light leading-relaxed">
+              Shot by verified VMCCC.FILMS filmmakers on iPhone 16 Pro Max. Color-graded with custom LUTs.
+            </p>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <a
+              href={reel.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 py-3 px-4 rounded-xl text-xs font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 text-white flex items-center justify-center gap-1.5 shadow-md"
+            >
+              <span>Watch on Instagram</span>
+              <span>↗</span>
+            </a>
+
+            <button
+              onClick={() => onBookReelStyle(reel)}
+              className="flex-1 btn-primary py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5"
+            >
+              <span>Book This Style</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <div className="text-center pt-2">
+            <a
+              href="https://wa.me/918341667106?text=Hi%20vmccc.films!%20I%20loved%20this%20reel%20and%20want%20to%20book%20a%20similar%20wedding%20slot."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center justify-center gap-1.5"
+            >
+              <span>💬 Direct WhatsApp Slot Confirmation (8341667106)</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  );
+}
+window.ReelModal = ReelModal;
+
+
+// --- File: js/components/QrModal.js ---
+// =========================================================
+// Instagram QR Modal Component — vmccc.films
+// =========================================================
+
+function QrModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-xl animate-fadeIn">
+      <div className="relative w-full max-w-sm rounded-3xl p-6 sm:p-8 glass-panel border border-[#E2BA65]/40 shadow-[0_0_60px_rgba(112,1,4,0.4)] text-center space-y-4">
+        
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-5 right-5 text-neutral-400 hover:text-white text-lg font-bold"
+        >
+          ✕
+        </button>
+
+        <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#E2BA65]">
+          Official Instagram Profile
+        </span>
+
+        <h3 className="text-xl font-bold text-white font-serif-luxury italic">
+          @vmccc.films_
+        </h3>
+
+        <p className="text-xs text-neutral-300 font-light">
+          Scan this QR code with your phone camera to follow our latest wedding reels, BTS, and stories.
+        </p>
+
+        {/* QR Code Container */}
+        <div className="p-3 bg-white rounded-2xl shadow-xl max-w-[220px] mx-auto border-2 border-[#E2BA65]/50">
+          <img
+            src="assets/instagram_qr.png"
+            alt="Instagram QR VMCCC.FILMS"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+
+        {/* Direct Link */}
+        <div className="pt-2">
+          <a
+            href="https://www.instagram.com/vmccc.films_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-3 px-4 rounded-xl text-xs font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 text-white flex items-center justify-center gap-2 shadow-md"
+          >
+            <span>Open @vmccc.films_ on Instagram</span>
+            <span>↗</span>
+          </a>
+        </div>
+
+        <p className="text-[11px] text-neutral-400">
+          Slot booking hotline: <a href="tel:8341667106" className="text-[#E2BA65] font-bold">8341667106</a>
+        </p>
+
+      </div>
+    </div>
+  );
+}
+window.QrModal = QrModal;
+
+
+// --- File: js/components/ConfirmationModal.js ---
+// =========================================================
+// Confirmation Modal Component — vmccc.films (Updated 8341667106)
+// =========================================================
+
+function ConfirmationModal({ bookingData, onClose }) {
+  if (!bookingData) return null;
+
+  const bookingRef = `VMCCC-${Math.floor(1000 + Math.random() * 9000)}`;
+
+  const whatsappConfirmationUrl = `https://wa.me/918341667106?text=Hi%20vmccc.films!%20I%20just%20reserved%20a%20slot%20online%20(Ref%3A%20${bookingRef})%20for%20${encodeURIComponent(bookingData.fullName)}.%20Please%20confirm!`;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-xl animate-fadeIn">
+      <div className="relative w-full max-w-md rounded-3xl p-6 sm:p-8 glass-panel border border-[#E2BA65]/40 shadow-[0_0_60px_rgba(112,1,4,0.4)] text-center">
+        
+        {/* Animated Celebration Icon */}
+        <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-[#700104] to-[#B51B2B] text-white flex items-center justify-center text-3xl mx-auto shadow-lg mb-5 border border-[#E2BA65]/40">
+          ✨
+        </div>
+
+        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#E2BA65]">
+          Slot Reserved
+        </span>
+
+        <h3 className="text-2xl font-bold text-white mt-1 mb-2 font-serif-luxury italic">
+          Your Wedding Shoot is Locked!
+        </h3>
+
+        <p className="text-xs text-neutral-300 font-light mb-6">
+          Reference Code: <span className="font-mono font-bold text-white bg-white/10 px-2 py-0.5 rounded border border-[#E2BA65]/30">{bookingRef}</span>
+        </p>
+
+        {/* Shoot Summary Ticket */}
+        <div className="bg-[#160B0E] rounded-2xl p-4 border border-white/10 text-left space-y-2.5 text-xs mb-6">
+          <div className="flex justify-between">
+            <span className="text-neutral-400">Client:</span>
+            <span className="font-semibold text-white">{bookingData.fullName}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-neutral-400">WhatsApp:</span>
+            <span className="font-semibold text-white">{bookingData.phone}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-neutral-400">City / Venue:</span>
+            <span className="font-semibold text-white">{bookingData.city}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-neutral-400">Event Date:</span>
+            <span className="font-semibold text-white">{bookingData.date || "Next Available"}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-neutral-400">Package:</span>
+            <span className="font-semibold text-[#E2BA65]">{bookingData.packageChoice}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-neutral-400">Slot Hotline:</span>
+            <span className="font-semibold text-white">8341667106</span>
+          </div>
+        </div>
+
+        {/* Direct WhatsApp Confirmation CTA */}
+        <div className="space-y-3">
+          <a
+            href={whatsappConfirmationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 shadow"
+          >
+            <span>Confirm Instant on WhatsApp (8341667106)</span>
+            <span>↗</span>
+          </a>
+
+          <button
+            onClick={onClose}
+            className="w-full py-2.5 rounded-xl font-semibold text-xs text-neutral-400 hover:text-white"
+          >
+            Close Receipt
+          </button>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+window.ConfirmationModal = ConfirmationModal;
+
+
+// --- File: js/app.js ---
 // =========================================================
 // Main App Component — vmccc.films (Updated)
 // =========================================================
@@ -3290,8 +2939,6 @@ function App() {
         {/* Cinema Gear Spotlight */}
         <window.GearSpotlight />
 
-        {/* Testimonials & Verified Stories */}
-        <window.Testimonials />
 
         {/* Slot Booking Form with Hotline 8341667106 */}
         <window.BookingForm 

@@ -7,15 +7,16 @@ window.VMCCC_DATA = {
     name: "vmccc.films",
     handle: "@vmccc.films_",
     instagramUrl: "https://www.instagram.com/vmccc.films_/",
-    title: "vmccc.films | Wedding Content Creators & Cinematic Films",
-    tagline: "Cherished Keepsakes. Cinematic Reels in 10 Minutes.",
-    subheading: "As wedding content creators, we capture and share the unique stories and moments of couples on their special day. We tell your love story through stunning visuals, heartfelt narratives and fun BTS.",
+    title: "VMCCC.FILMS | MAKE YOUR MOMENTS LOOK LIKE A MOVIE",
+    tagline: "MAKE YOUR MOMENTS LOOK LIKE A MOVIE",
+    submotto: "SHOOT • EDIT • DELIVER",
+    subheading: "We capture and share the unique stories and moments of couples on their special day. We make your moments look like a movie through stunning visuals, heartfelt narratives and fun BTS.",
     
     // Official Slot Booking Details
     phone: "8341667106",
     phoneDisplay: "+91 8341667106",
     callUrl: "tel:8341667106",
-    whatsappUrl: "https://wa.me/918341667106?text=Hi%20vmccc.films!%20I%20would%20like%20to%20book%20a%20slot%20for%20our%20wedding%20%2F%20event%20cinematic%20reel%20shoot.",
+    whatsappUrl: "https://wa.me/918341667106?text=Hi%20vmccc.films!%20I%20would%20like%20to%20book%20a%20slot%20for%20our%20cinematic%20reel%20shoot.",
     email: "vmccc.films@gmail.com",
 
     // Official Image Assets
@@ -25,14 +26,15 @@ window.VMCCC_DATA = {
     logoWhite: "assets/logo_white.png",
     instagramQr: "assets/instagram_qr.png",
     aboutCard: "assets/about_card.jpg",
+    movieCard: "assets/movie_card.jpg",
     featuredVideo: "assets/vamcyyy.mp4",
 
     // About Us official manifesto
     aboutText: {
       title: "ABOUT US",
       handle: "vmccc.films_",
-      p1: "As wedding content creators, we capture and share the unique stories and moments of couples on their special day.",
-      p2: "We understand the significance of the little moments and strive to tell your love story through stunning visuals, heartfelt narratives and fun BTS.",
+      p1: "We capture and share the unique stories and moments of couples on their special day.",
+      p2: "We understand the significance of the little moments and strive to make your moments look like a movie through stunning visuals, heartfelt narratives and fun BTS.",
       p3: "Let us turn your celebration into a cherished keepsake."
     },
 
@@ -47,9 +49,9 @@ window.VMCCC_DATA = {
 
   stats: [
     { value: "10 Mins", label: "On-Site Reel Delivery", sub: "Cut, graded & dropped live" },
-    { value: "4.9 ★", label: "Couples & Brand Rating", sub: "Across 2,400+ authentic reviews" },
-    { value: "1,50,000+", label: "Reels & BTS Delivered", sub: "Cherished wedding keepsakes" },
-    { value: "100%", label: "Heartfelt Narratives", sub: "Shot on iPhone 16 Pro Max ProRes" }
+    { value: "4K 60FPS", label: "Cinema Quality Standard", sub: "Shot on iPhone 16 Pro Max ProRes" },
+    { value: "1,50,000+", label: "Reels & BTS Delivered", sub: "Cherished cinematic keepsakes" },
+    { value: "100%", label: "Heartfelt Narratives", sub: "SHOOT • EDIT • DELIVER" }
   ],
 
   howItWorks: [
@@ -247,7 +249,7 @@ window.VMCCC_DATA = {
           "Same-day reel export to post on Instagram stories",
           "Couple portrait & aesthetic slow-mo shots (120fps)",
           "Entire raw iPhone 16 Pro reel archive via AirDrop",
-          "Formal attire wedding content creator"
+          "Formal attire professional cinema filmmaker"
         ]
       },
       {
@@ -437,8 +439,8 @@ window.VMCCC_DATA = {
       a: "Our creators are trained speed-editors equipped with high-performance mobile editing setups (iPad Pro M4 and iPhone 16 Pro Max). Using custom pre-calibrated cinematic LUTs, instant clip trimming, and trending audio, we grade and export your reels right beside you before your celebration wraps."
     },
     {
-      q: "What makes wedding content creation different from traditional videography?",
-      a: "Traditional videographers shoot heavy landscape footage for 2-hour long documentary videos delivered months later. As wedding content creators, vmccc.films focuses on capturing the little moments, heartfelt vows, and fun BTS in vertical 9:16 format — delivered on-site so you can share your joy on Instagram while it's still happening!"
+      q: "What makes VMCCC.FILMS different from traditional videography?",
+      a: "Traditional videographers shoot heavy landscape footage for 2-hour long documentary videos delivered months later. VMCCC.FILMS focuses on capturing the little moments, heartfelt vows, and fun BTS in vertical 9:16 format — color-graded and delivered on-site in 10 minutes so you can share your joy on Instagram while it's still happening!"
     },
     {
       q: "What equipment do vmccc.films creators use?",

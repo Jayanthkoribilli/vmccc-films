@@ -17,11 +17,11 @@ function Comparison({ onBookClick }) {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
             Why Modern Couples Choose <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F3E5C8] via-[#E2BA65] to-[#B88E35] font-serif-luxury italic">
-              vmccc.films_ Wedding Creators
+              VMCCC.FILMS
             </span>
           </h2>
           <p className="mt-4 text-base text-neutral-400 font-light leading-relaxed">
-            See how our mobile wedding content creation outpaces traditional videographers in speed, heart, and social media virality.
+            See how VMCCC.FILMS outpaces traditional videographers in speed, cinematic quality, and 10-minute on-site delivery.
           </p>
         </div>
 

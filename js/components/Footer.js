@@ -37,14 +37,14 @@ function Footer({ onBookClick, onOpenQrModal }) {
                 <span className="font-heading font-extrabold text-xl tracking-tight text-white">
                   vmccc<span className="text-[#A31526]">.films</span>
                 </span>
-                <span className="text-[10px] font-semibold tracking-[0.25em] text-[#E2BA65] uppercase">
-                  Wedding Content Creators
+                <span className="text-[9px] font-bold tracking-[0.2em] text-[#E2BA65] uppercase">
+                  MAKE YOUR MOMENTS LOOK LIKE A MOVIE
                 </span>
               </div>
             </div>
 
             <p className="text-xs text-neutral-300 font-light leading-relaxed max-w-md">
-              As wedding content creators, we capture and share the unique stories and moments of couples on their special day. Turning celebrations into cherished keepsakes through stunning visuals, heartfelt narratives and fun BTS.
+              We capture and share the unique stories and moments of couples on their special day. Turning celebrations into cherished keepsakes through stunning visuals, heartfelt narratives and fun BTS.
             </p>
 
             {/* Slot Hotline Box */}
@@ -166,7 +166,7 @@ function Footer({ onBookClick, onOpenQrModal }) {
         {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
           <div>
-            © 2026 <strong className="text-white">vmccc.films</strong>. Wedding Content Creators • Built with modern React.
+            © 2026 <strong className="text-white">vmccc.films</strong>. MAKE YOUR MOMENTS LOOK LIKE A MOVIE • SHOOT • EDIT • DELIVER.
           </div>
           <div className="flex items-center gap-6 text-neutral-400">
             <a href="tel:8341667106" className="text-[#E2BA65] font-semibold hover:underline">Slot Booking: 8341667106</a>

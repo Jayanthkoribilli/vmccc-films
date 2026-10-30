@@ -14,14 +14,14 @@ function AboutUs({ onBookClick }) {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E2BA65]/30 bg-[#700104]/20 backdrop-blur-md mb-4">
             <span className="w-2 h-2 rounded-full bg-[#E2BA65]"></span>
             <span className="text-xs font-semibold tracking-widest uppercase text-[#F3E5C8]">
-              Wedding Content Creators
+              SHOOT • EDIT • DELIVER
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            About <span className="font-serif-luxury italic text-[#E2BA65]">vmccc.films_</span>
+            About <span className="font-serif-luxury italic text-[#E2BA65]">VMCCC.FILMS</span>
           </h2>
           <p className="mt-4 text-base text-neutral-400 font-light leading-relaxed">
-            Turning celebrations into cherished keepsakes through stunning visuals, heartfelt narratives and fun BTS.
+            MAKE YOUR MOMENTS LOOK LIKE A MOVIE — turning celebrations into cherished keepsakes through stunning visuals, heartfelt narratives and fun BTS.
           </p>
         </div>
 
@@ -38,7 +38,7 @@ function AboutUs({ onBookClick }) {
             <div className="w-full md:w-56 shrink-0 rounded-2xl overflow-hidden border-2 border-[#E2BA65]/40 shadow-xl group">
               <img
                 src="assets/about_card.jpg"
-                alt="About vmccc.films_"
+                alt="About VMCCC.FILMS"
                 className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
@@ -48,19 +48,19 @@ function AboutUs({ onBookClick }) {
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#E2BA65]">
                 <span>Our Philosophy</span>
                 <span>•</span>
-                <span className="text-neutral-400">Cherished Keepsakes</span>
+                <span className="text-neutral-400">MAKE YOUR MOMENTS LOOK LIKE A MOVIE</span>
               </div>
 
               <h3 className="text-2xl font-bold text-white leading-tight font-serif-luxury italic">
-                "We capture the unique stories of couples on their special day."
+                "We capture the unique stories of couples and celebrations."
               </h3>
 
               <div className="space-y-3 text-xs sm:text-sm text-neutral-300 font-light leading-relaxed">
                 <p>
-                  As wedding content creators, we understand the profound significance of the little moments. From spontaneous bridal suite giggles to intimate vows and electric sangeet dance floors.
+                  We understand the profound significance of the little moments. From spontaneous bridal suite giggles to intimate vows and electric celebration dance floors.
                 </p>
                 <p>
-                  We strive to tell your love story through <strong className="text-white font-medium">stunning visuals</strong>, <strong className="text-white font-medium">heartfelt narratives</strong>, and <strong className="text-white font-medium">fun BTS</strong> — delivered on-site within 10 to 15 minutes.
+                  We strive to make your moments look like a movie through <strong className="text-white font-medium">stunning visuals</strong>, <strong className="text-white font-medium">heartfelt narratives</strong>, and <strong className="text-white font-medium">fun BTS</strong> — delivered on-site within 10 to 15 minutes.
                 </p>
               </div>
 

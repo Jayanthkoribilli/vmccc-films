@@ -109,8 +109,6 @@ function App() {
         {/* Cinema Gear Spotlight */}
         <window.GearSpotlight />
 
-        {/* Testimonials & Verified Stories */}
-        <window.Testimonials />
 
         {/* Slot Booking Form with Hotline 8341667106 */}
         <window.BookingForm 

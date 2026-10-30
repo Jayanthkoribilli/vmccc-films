@@ -44,7 +44,7 @@ function Navbar({ onBookClick, onOpenQrModal }) {
         </div>
         <span className="text-white/40 hidden sm:inline">•</span>
         <span className="hidden md:inline text-white/90">
-          Wedding Content Creators • Reels Delivered in 10 Minutes
+          ⚡ 10-Min On-Site Delivery • SHOOT • EDIT • DELIVER
         </span>
         <a 
           href={brand.whatsappUrl} 
@@ -76,10 +76,10 @@ function Navbar({ onBookClick, onOpenQrModal }) {
             </div>
             <div className="hidden sm:flex flex-col">
               <span className="font-heading font-extrabold text-lg tracking-tight text-white group-hover:text-[#E2BA65] transition-colors">
-                vmccc<span className="text-[#A31526]">.films</span>
+                VMCCC<span className="text-[#A31526]">.FILMS</span>
               </span>
-              <span className="text-[9px] font-medium tracking-[0.25em] text-[#E2BA65] uppercase -mt-0.5">
-                Wedding Content Creators
+              <span className="text-[8.5px] font-bold tracking-[0.2em] text-[#E2BA65] uppercase -mt-0.5">
+                MAKE YOUR MOMENTS LOOK LIKE A MOVIE
               </span>
             </div>
           </a>

@@ -1,45 +1,15 @@
 // =========================================================
-// Hero Component — vmccc.films (Updated Burgundy/Gold & 8341667106)
+// Hero Component — VMCCC.FILMS
+// Tagline: MAKE YOUR MOMENTS LOOK LIKE A MOVIE
+// Sub-motto: SHOOT • EDIT • DELIVER
+// Hotline: 8341667106
 // =========================================================
 
 function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
-  const [isPlaying, setIsPlaying] = React.useState(true);
-  const [isMuted, setIsMuted] = React.useState(true);
-  const [liked, setLiked] = React.useState(false);
-  const [likeCount, setLikeCount] = React.useState(148500);
   const [selectedCity, setSelectedCity] = React.useState("Hyderabad");
   const [shootDate, setShootDate] = React.useState("");
   const [checkResult, setCheckResult] = React.useState(null);
-  const videoRef = React.useRef(null);
   const brand = window.VMCCC_DATA.brand;
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play().catch(() => {});
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
-
-  const handleLike = () => {
-    if (!liked) {
-      setLiked(true);
-      setLikeCount(prev => prev + 1);
-    } else {
-      setLiked(false);
-      setLikeCount(prev => prev - 1);
-    }
-  };
 
   const handleCheckAvailability = (e) => {
     e.preventDefault();
@@ -51,9 +21,10 @@ function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
 
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#0B0708]">
-      {/* Ambient background glows in burgundy */}
+      {/* Ambient background glows in burgundy and champagne gold */}
       <div className="ambient-glow-top"></div>
       <div className="ambient-glow-center top-1/4 left-1/4"></div>
+      <div className="absolute top-1/3 right-10 w-96 h-96 bg-[#700104]/20 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -61,30 +32,31 @@ function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
           {/* Left Column: Headline, Value Proposition, Action */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            {/* Eyebrow Pill with Official Handle */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#E2BA65]/35 bg-[#700104]/25 backdrop-blur-md">
+            {/* Eyebrow Pill with Official Brand & Sub-motto */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E2BA65]/35 bg-[#700104]/25 backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-[#E2BA65] animate-ping"></span>
               <span className="w-2 h-2 rounded-full bg-[#E2BA65] -ml-4"></span>
               <span className="text-xs font-semibold tracking-wider uppercase text-[#F3E5C8]">
-                Wedding Content Creators • @vmccc.films_
+                VMCCC.FILMS • SHOOT • EDIT • DELIVER
               </span>
             </div>
 
-            {/* Main Title */}
+            {/* Main Title featuring user's exact tagline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
-              Capturing Moments Into <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F3E5C8] via-[#E2BA65] to-[#B88E35] font-serif-luxury italic">
-                Cherished Keepsakes.
+              <span className="block text-2xl sm:text-3xl md:text-4xl font-heading tracking-widest text-white uppercase mb-2">
+                VMCCC.FILMS
               </span>
-              <br />
-              <span className="text-2xl sm:text-3xl md:text-4xl font-light text-neutral-300">
-                Wedding Reels in 10 Minutes.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F3E5C8] via-[#E2BA65] to-[#B88E35] font-serif-luxury italic block">
+                MAKE YOUR MOMENTS LOOK LIKE A MOVIE.
+              </span>
+              <span className="text-xs sm:text-sm font-semibold tracking-[0.3em] text-[#E2BA65] uppercase block mt-3 font-mono">
+                SHOOT • EDIT • DELIVER
               </span>
             </h1>
 
-            {/* Official Manifesto from Uploaded Card */}
+            {/* Official Manifesto */}
             <p className="text-base sm:text-lg text-neutral-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-              As wedding content creators, we capture and share the unique stories of couples on their special day. We tell your love story through stunning visuals, heartfelt narratives and fun BTS — delivered on-site while the magic is still alive.
+              We capture and share the unique stories of couples and special celebrations on their day. We tell your story through stunning visuals, heartfelt narratives and fun BTS — color-graded and delivered on-site in 10 minutes.
             </p>
 
             {/* Slot Booking Hotline Bar */}
@@ -137,7 +109,7 @@ function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
                 <div className="w-6 h-6 rounded-full bg-[#700104] flex items-center justify-center text-[#E2BA65] text-xs">
                   ▶
                 </div>
-                <span>Watch Wedding Reels</span>
+                <span>Watch Cinematic Reels</span>
               </button>
             </div>
 
@@ -189,150 +161,98 @@ function Hero({ onBookClick, onWatchShowreel, onOpenQrModal }) {
               )}
             </div>
 
-            {/* Trust Metric Micro-Bar */}
+            {/* Trust Metric Micro-Bar (No reviews) */}
             <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-neutral-400">
-              <div className="flex items-center gap-1.5">
-                <span className="text-[#E2BA65] text-sm">★★★★★</span>
-                <span className="text-white font-semibold">4.9</span>
-                <span>(2,400+ couples & clients)</span>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-white font-semibold">⚡ 10-Min Live Delivery Guarantee</span>
               </div>
               <span className="text-neutral-600">•</span>
               <div className="flex items-center gap-1.5">
-                <span className="text-white font-medium">10-Min Live Delivery Guarantee</span>
+                <span className="text-[#E2BA65] font-semibold">SHOOT • EDIT • DELIVER</span>
               </div>
               <span className="text-neutral-600 hidden sm:inline">•</span>
               <div className="text-neutral-300 font-medium hidden sm:block">
-                Shot on iPhone 16 Pro Max
+                Shot on iPhone 16 Pro Max ProRes
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: Interactive iPhone Mockup displaying Reel */}
-          <div className="lg:col-span-5 flex justify-center relative">
+          {/* Right Column: Aesthetic Brand Movie Card & Showcase (Top Video removed as requested) */}
+          <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
             
-            {/* Ambient behind phone */}
-            <div className="absolute inset-0 bg-[#700104]/30 rounded-full blur-[90px] -z-10"></div>
+            {/* Ambient behind card */}
+            <div className="absolute inset-0 bg-[#700104]/35 rounded-3xl blur-[80px] -z-10"></div>
 
-            <div className="phone-mockup">
-              <div className="phone-island"></div>
+            {/* Cinema Identity Card Container */}
+            <div className="w-full max-w-md glass-panel p-3 sm:p-4 rounded-3xl border border-[#E2BA65]/35 shadow-[0_0_50px_rgba(112,1,4,0.4)] relative group hover:border-[#E2BA65]/60 transition-all duration-500">
               
-              <div className="phone-screen group relative">
-                {/* Real Video from assets/vamcyyy.mp4 */}
-                <video
-                  ref={videoRef}
-                  className="w-full h-full object-cover"
-                  src="assets/vamcyyy.mp4"
-                  playsInline
-                  autoPlay
-                  loop
-                  muted={isMuted}
+              {/* Corner Accents */}
+              <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#E2BA65]"></div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#E2BA65]"></div>
+              <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#E2BA65]"></div>
+              <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#E2BA65]"></div>
+
+              {/* Exact Tagline Card Image Provided by User */}
+              <div className="rounded-2xl overflow-hidden border border-[#E2BA65]/20 shadow-2xl relative bg-black">
+                <img
+                  src="assets/movie_card.jpg"
+                  alt="VMCCC.FILMS - MAKE YOUR MOMENTS LOOK LIKE A MOVIE - SHOOT EDIT DELIVER"
+                  className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
                 />
+              </div>
 
-                {/* Top Overlay Badge */}
-                <div className="absolute top-12 left-4 right-4 flex items-center justify-between z-30">
-                  <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-[#E2BA65]/30">
-                    <span className="w-2 h-2 rounded-full bg-[#E2BA65] animate-pulse"></span>
-                    <span className="text-[10px] font-semibold text-white uppercase tracking-wider">
-                      vmccc.films_ 4K
-                    </span>
+              {/* Interactive Booking & Action Bar Under Card */}
+              <div className="mt-4 p-3 rounded-2xl bg-[#0B0708]/80 border border-white/10 space-y-3">
+                <div className="flex items-center justify-between text-xs px-1">
+                  <div className="flex items-center gap-1.5 text-neutral-300">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span>Ready for Booking</span>
                   </div>
+                  <span className="text-[#E2BA65] font-semibold text-[11px] uppercase tracking-wider">
+                    Pan-India Service
+                  </span>
+                </div>
 
-                  <button
-                    onClick={toggleMute}
-                    className="w-8 h-8 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white hover:bg-black/90 transition-colors"
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="tel:8341667106"
+                    className="py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#700104] to-[#94101E] hover:from-[#94101E] hover:to-[#B51B2B] text-white text-xs font-bold transition-all shadow text-center flex items-center justify-center gap-1.5 border border-[#E2BA65]/30"
                   >
-                    {isMuted ? "🔇" : "🔊"}
-                  </button>
+                    <span>📞 8341667106</span>
+                  </a>
+
+                  <a
+                    href={brand.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow text-center flex items-center justify-center gap-1.5"
+                  >
+                    <span>💬 WhatsApp</span>
+                  </a>
                 </div>
 
-                {/* Center Play/Pause button on tap */}
-                <div 
-                  onClick={togglePlay}
-                  className="absolute inset-0 flex items-center justify-center cursor-pointer z-20"
+                <button
+                  onClick={onBookClick}
+                  className="w-full btn-primary py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg flex items-center justify-center gap-1.5"
                 >
-                  {!isPlaying && (
-                    <div className="w-14 h-14 rounded-full bg-black/70 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-2xl">
-                      <svg className="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
-                        <polygon points="5 3 19 12 5 21 5 3" />
-                      </svg>
-                    </div>
-                  )}
-                </div>
-
-                {/* Right Instagram Actions Column */}
-                <div className="absolute right-3 bottom-24 flex flex-col items-center gap-4 z-30">
-                  {/* Like Button */}
-                  <div className="flex flex-col items-center">
-                    <button
-                      onClick={handleLike}
-                      className={`w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md transition-all ${
-                        liked ? 'bg-[#700104] text-white scale-110' : 'bg-black/50 text-white hover:bg-black/70'
-                      }`}
-                    >
-                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                      </svg>
-                    </button>
-                    <span className="text-[11px] font-semibold text-white mt-1 drop-shadow-md">
-                      {(likeCount / 1000).toFixed(1)}k
-                    </span>
-                  </div>
-
-                  {/* Comment Button */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
-                    </div>
-                    <span className="text-[11px] font-semibold text-white mt-1 drop-shadow-md">2.1k</span>
-                  </div>
-
-                  {/* Share Button */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white">
-                      <svg className="w-5 h-5 -rotate-12 translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                      </svg>
-                    </div>
-                    <span className="text-[11px] font-semibold text-white mt-1 drop-shadow-md">Share</span>
-                  </div>
-                </div>
-
-                {/* Bottom Instagram Captions Overlay */}
-                <div className="absolute left-3 right-16 bottom-5 z-30 text-left space-y-1.5">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-full overflow-hidden bg-white flex items-center justify-center p-0.5 border border-[#E2BA65]">
-                      <img src="assets/logo.png" alt="logo" className="w-full h-full object-contain" />
-                    </div>
-                    <span className="text-xs font-bold text-white drop-shadow-md">vmccc.films_</span>
-                    <span className="px-1.5 py-0.2 rounded text-[9px] bg-[#700104] text-[#F3E5C8] font-medium border border-[#E2BA65]/30">Verified</span>
-                  </div>
-
-                  <p className="text-[11px] text-neutral-200 font-light leading-snug line-clamp-2 drop-shadow-md">
-                    "Telling your love story through stunning visuals, heartfelt narratives & fun BTS ✨"
-                  </p>
-
-                  <div className="flex items-center gap-1.5 text-[10px] text-[#E2BA65] font-medium">
-                    <span>♫</span>
-                    <span className="truncate">vmccc.films_ • Romantic Vows Original Audio</span>
-                  </div>
-                </div>
-
-                <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none z-10"></div>
+                  <span>Reserve Date Online</span>
+                  <span>→</span>
+                </button>
               </div>
-            </div>
 
-            {/* Floating Hotline Badge next to phone */}
-            <div className="hidden sm:flex absolute -bottom-6 -left-8 glass-panel px-4 py-3 rounded-2xl border border-[#E2BA65]/30 shadow-2xl items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#700104] border border-[#E2BA65]/40 flex items-center justify-center text-white font-bold text-base">
-                📞
+              {/* Floating Badges */}
+              <div className="absolute -bottom-4 -left-3 glass-panel px-3.5 py-2 rounded-xl border border-[#E2BA65]/30 shadow-xl hidden sm:flex items-center gap-2">
+                <span className="text-base">⚡</span>
+                <span className="text-[11px] font-bold text-white">10-Min Delivery</span>
               </div>
-              <div className="flex flex-col text-left">
-                <span className="text-xs font-bold text-white">Call 8341667106</span>
-                <span className="text-[10px] text-[#E2BA65]">Instant Slot Reservation</span>
+
+              <div className="absolute -top-3 -right-3 glass-panel px-3 py-1.5 rounded-xl border border-[#E2BA65]/30 shadow-xl hidden sm:flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#E2BA65] animate-pulse"></span>
+                <span className="text-[10px] font-bold text-[#F3E5C8] uppercase tracking-wider">4K ProRes</span>
               </div>
+
             </div>
 
           </div>

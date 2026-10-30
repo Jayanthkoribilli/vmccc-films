@@ -69,7 +69,7 @@ function ReelModal({ reel, onClose, onBookReelStyle }) {
             <div className="text-xs text-[#E2BA65] font-semibold">{reel.client}</div>
             <h3 className="text-xl font-bold text-white mt-0.5 leading-tight">{reel.title}</h3>
             <p className="text-xs text-neutral-300 mt-1 font-light leading-relaxed">
-              Shot by verified vmccc.films_ wedding content creators on iPhone 16 Pro Max. Color-graded with custom LUTs.
+              Shot by verified VMCCC.FILMS filmmakers on iPhone 16 Pro Max. Color-graded with custom LUTs.
             </p>
           </div>
 
